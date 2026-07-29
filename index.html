@@ -449,6 +449,84 @@
     .brand .mark { font-size: 0.92rem; }
     nav.links { gap: 14px; }
   }
+
+  /* ---------- Consult modal ---------- */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: rgba(14, 23, 22, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  .modal-overlay[hidden] { display: none; }
+  .modal {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    max-width: 520px;
+    width: 100%;
+    max-height: calc(100vh - 48px);
+    overflow-y: auto;
+    padding: 36px;
+    position: relative;
+  }
+  .modal h2 { font-size: clamp(1.4rem, 3vw, 1.7rem); }
+  .modal .modal-lede { color: var(--ink-soft); margin: 10px 0 0; font-size: 0.96rem; }
+  .modal-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    background: transparent;
+    border: none;
+    color: var(--ink-faint);
+    font-size: 1.4rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .modal-close:hover { color: var(--ink); }
+  .field {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .field label {
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  .field .optional {
+    text-transform: none;
+    letter-spacing: 0;
+    font-family: inherit;
+  }
+  .field input, .field textarea {
+    background: var(--bg);
+    border: 1px solid var(--line);
+    color: var(--ink);
+    padding: 11px 13px;
+    font-family: inherit;
+    font-size: 0.95rem;
+  }
+  .field input:focus, .field textarea:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+  }
+  .field textarea { resize: vertical; min-height: 90px; }
+  .modal form { margin-top: 4px; }
+  .modal .btn { margin-top: 26px; width: 100%; justify-content: center; padding: 13px 18px; }
+  .modal .btn[disabled] { opacity: 0.6; cursor: not-allowed; }
+  .form-status {
+    margin-top: 16px;
+    font-size: 0.9rem;
+  }
+  .form-status.error { color: var(--accent); }
+  .form-status.success { color: var(--accent-deep); }
 </style>
 </head>
 <body>
@@ -464,7 +542,7 @@
       <a class="hide-sm" href="#services">Services</a>
       <a class="hide-sm" href="#about">About</a>
       <a class="hide-sm" href="#pricing">Pricing</a>
-      <a class="btn" href="mailto:nickrizzo77277@gmail.com?subject=Project%20inquiry">Book a consult</a>
+      <button type="button" class="btn" data-open-consult>Book a consult</button>
     </nav>
   </div>
 </header>
@@ -476,7 +554,7 @@
       <h1 class="slab">Technology that works exactly as promised.</h1>
       <p class="lede">Rizzo Technology Solutions helps small businesses fix what's broken, build what's missing, and keep both running &mdash; without the jargon, the upsell, or the six-week wait for a callback.</p>
       <div class="ctas">
-        <a class="btn" href="mailto:nickrizzo77277@gmail.com?subject=Project%20inquiry">Book a free consult</a>
+        <button type="button" class="btn" data-open-consult>Book a free consult</button>
         <a class="btn ghost" href="#services">See what I do</a>
       </div>
     </div>
@@ -650,6 +728,42 @@
   </section>
 </main>
 
+<div class="modal-overlay" id="consult-modal" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="consult-modal-title">
+    <button type="button" class="modal-close" data-close-consult aria-label="Close">&times;</button>
+    <h2 class="slab" id="consult-modal-title">Book a free consult</h2>
+    <p class="modal-lede">Tell me a bit about your project and I'll reply within one business day.</p>
+    <form id="consult-form">
+      <div class="field">
+        <label for="cf-name">Name</label>
+        <input type="text" id="cf-name" name="name" required autocomplete="name">
+      </div>
+      <div class="field">
+        <label for="cf-company">Company name</label>
+        <input type="text" id="cf-company" name="company" required autocomplete="organization">
+      </div>
+      <div class="field">
+        <label for="cf-email">Email</label>
+        <input type="email" id="cf-email" name="email" required autocomplete="email">
+      </div>
+      <div class="field">
+        <label for="cf-phone">Phone <span class="optional">(optional)</span></label>
+        <input type="tel" id="cf-phone" name="phone" autocomplete="tel">
+      </div>
+      <div class="field">
+        <label for="cf-message">What are you looking for?</label>
+        <textarea id="cf-message" name="message" required></textarea>
+      </div>
+      <input type="hidden" name="access_key" value="f95a78b3-18c8-40da-8d31-dd8de1a51a6a">
+      <input type="hidden" name="subject" value="New consult request — rizzotechsolutions.com">
+      <input type="hidden" name="from_name" value="RTS website consult form">
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+      <button type="submit" class="btn">Send request</button>
+      <p class="form-status" id="consult-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</div>
+
 <footer>
   <div class="wrap">
     <span class="mono">&copy; 2026 RIZZO TECHNOLOGY SOLUTIONS</span>
@@ -657,5 +771,75 @@
   </div>
 </footer>
 
+<script>
+(function () {
+  var overlay = document.getElementById('consult-modal');
+  var form = document.getElementById('consult-form');
+  var status = document.getElementById('consult-status');
+  var openBtns = document.querySelectorAll('[data-open-consult]');
+  var closeBtns = document.querySelectorAll('[data-close-consult]');
+  var lastFocused = null;
+
+  function openModal() {
+    lastFocused = document.activeElement;
+    overlay.hidden = false;
+    document.body.style.overflow = 'hidden';
+    var firstField = document.getElementById('cf-name');
+    if (firstField) firstField.focus();
+  }
+
+  function closeModal() {
+    overlay.hidden = true;
+    document.body.style.overflow = '';
+    if (lastFocused) lastFocused.focus();
+  }
+
+  openBtns.forEach(function (btn) {
+    btn.addEventListener('click', openModal);
+  });
+  closeBtns.forEach(function (btn) {
+    btn.addEventListener('click', closeModal);
+  });
+  overlay.addEventListener('click', function (e) {
+    if (e.target === overlay) closeModal();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !overlay.hidden) closeModal();
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var submitBtn = form.querySelector('button[type="submit"]');
+    status.textContent = 'Sending…';
+    status.className = 'form-status';
+    submitBtn.disabled = true;
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify(Object.fromEntries(new FormData(form)))
+    })
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        if (data.success) {
+          status.textContent = "Thanks — I'll be in touch within one business day.";
+          status.className = 'form-status success';
+          form.reset();
+          setTimeout(closeModal, 2200);
+        } else {
+          status.textContent = 'Something went wrong sending that. Please email nickrizzo77277@gmail.com directly.';
+          status.className = 'form-status error';
+        }
+      })
+      .catch(function () {
+        status.textContent = 'Something went wrong sending that. Please email nickrizzo77277@gmail.com directly.';
+        status.className = 'form-status error';
+      })
+      .finally(function () {
+        submitBtn.disabled = false;
+      });
+  });
+})();
+</script>
 </body>
 </html>
