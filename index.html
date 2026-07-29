@@ -1,0 +1,618 @@
+<title>Rizzo Technology Solutions — IT Consulting &amp; Web Development</title>
+<style>
+  :root {
+    --bg: #EEF3F1;
+    --surface: #FFFFFF;
+    --ink: #16211F;
+    --ink-soft: #4B5C58;
+    --ink-faint: #7C8B87;
+    --accent: #B8672E;      /* copper — used on light ground */
+    --accent-deep: #2F5C55; /* deep teal — used on light ground */
+    --line: #C7D6D0;
+    --grid-line: rgba(47, 92, 85, 0.08);
+    --btn-ink: #F5EFE7;
+    --shadow: 0 1px 0 rgba(22, 33, 31, 0.05);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0E1716;
+      --surface: #162220;
+      --ink: #E7EFEC;
+      --ink-soft: #9FB3AD;
+      --ink-faint: #6C8580;
+      --accent: #E08A47;
+      --accent-deep: #7FC0B2;
+      --line: #263631;
+      --grid-line: rgba(127, 192, 178, 0.08);
+      --btn-ink: #10201D;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0E1716;
+    --surface: #162220;
+    --ink: #E7EFEC;
+    --ink-soft: #9FB3AD;
+    --ink-faint: #6C8580;
+    --accent: #E08A47;
+    --accent-deep: #7FC0B2;
+    --line: #263631;
+    --grid-line: rgba(127, 192, 178, 0.08);
+    --btn-ink: #10201D;
+  }
+  :root[data-theme="light"] {
+    --bg: #EEF3F1;
+    --surface: #FFFFFF;
+    --ink: #16211F;
+    --ink-soft: #4B5C58;
+    --ink-faint: #7C8B87;
+    --accent: #B8672E;
+    --accent-deep: #2F5C55;
+    --line: #C7D6D0;
+    --grid-line: rgba(47, 92, 85, 0.08);
+    --btn-ink: #F5EFE7;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background:
+      linear-gradient(var(--grid-line) 1px, transparent 1px) 0 0 / 100% 40px,
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px) 0 0 / 40px 100%,
+      var(--bg);
+    color: var(--ink);
+    font-family: "Avenir Next", "Century Gothic", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .slab {
+    font-family: Rockwell, "Roboto Slab", "Sitka Small", Georgia, "Times New Roman", serif;
+  }
+  .mono {
+    font-family: "SF Mono", "Menlo", "Consolas", "Liberation Mono", monospace;
+  }
+
+  a { color: var(--accent-deep); }
+  a:focus-visible, button:focus-visible, .btn:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  h1, h2, h3 { text-wrap: balance; margin: 0; }
+  p { text-wrap: pretty; }
+
+  .wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  /* ---------- Header ---------- */
+  header.site {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 16px 0;
+  }
+  .brand {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .brand .mark {
+    font-family: Rockwell, "Roboto Slab", Georgia, serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 0.02em;
+  }
+  .brand .mark small {
+    display: block;
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.16em;
+    color: var(--ink-faint);
+    font-weight: 400;
+    margin-top: 2px;
+  }
+  nav.links {
+    display: flex;
+    gap: 26px;
+    align-items: center;
+  }
+  nav.links a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-size: 0.92rem;
+    letter-spacing: 0.01em;
+  }
+  nav.links a:hover { color: var(--accent-deep); }
+  nav.links a.btn,
+  nav.links a.btn:hover {
+    color: var(--btn-ink);
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent-deep);
+    color: var(--btn-ink);
+    text-decoration: none;
+    padding: 10px 18px;
+    border: 1px solid var(--accent-deep);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    cursor: pointer;
+  }
+  .btn:hover { background: var(--accent); border-color: var(--accent); }
+  .btn.ghost {
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--line);
+  }
+  .btn.ghost:hover { border-color: var(--accent-deep); color: var(--accent-deep); }
+
+  @media (max-width: 720px) {
+    nav.links a.hide-sm { display: none; }
+  }
+
+  /* ---------- Eyebrow / section scaffolding ---------- */
+  .eyebrow {
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent-deep);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 22px;
+    height: 1px;
+    background: var(--accent-deep);
+  }
+  section { padding: 96px 0; }
+  section + section { border-top: 1px solid var(--line); }
+
+  .section-head {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 640px;
+    margin-bottom: 52px;
+  }
+  .section-head h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); }
+  .section-head p { color: var(--ink-soft); font-size: 1.02rem; max-width: 60ch; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    padding: 76px 0 90px;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 56px;
+    align-items: center;
+  }
+  .hero h1 {
+    font-size: clamp(2.2rem, 4.6vw, 3.4rem);
+    line-height: 1.12;
+    margin-top: 18px;
+  }
+  .hero .lede {
+    margin-top: 22px;
+    font-size: 1.12rem;
+    color: var(--ink-soft);
+    max-width: 46ch;
+  }
+  .hero .ctas {
+    margin-top: 34px;
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .hero .ctas .btn { padding: 13px 22px; font-size: 0.95rem; }
+
+  .schematic {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    border: 1px solid var(--line);
+    background: var(--surface);
+  }
+  .schematic svg { width: 100%; height: 100%; display: block; }
+  .schematic .tag {
+    position: absolute;
+    bottom: 10px;
+    left: 12px;
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.64rem;
+    letter-spacing: 0.12em;
+    color: var(--ink-faint);
+  }
+
+  @media (max-width: 860px) {
+    .hero { grid-template-columns: 1fr; }
+    .schematic { max-width: 420px; margin: 0 auto; }
+  }
+
+  /* ---------- Services ---------- */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  .service-card {
+    background: var(--surface);
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .service-card .tag {
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    color: var(--accent);
+  }
+  .service-card h3 {
+    font-family: Rockwell, "Roboto Slab", Georgia, serif;
+    font-size: 1.2rem;
+  }
+  .service-card p { color: var(--ink-soft); font-size: 0.97rem; margin: 0; }
+
+  @media (max-width: 860px) {
+    .services-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ---------- About ---------- */
+  .about {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  .monogram {
+    width: 128px;
+    height: 128px;
+    border: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Rockwell, "Roboto Slab", Georgia, serif;
+    font-size: 2rem;
+    color: var(--accent-deep);
+    background: var(--surface);
+  }
+  .about-copy p {
+    max-width: 62ch;
+    color: var(--ink-soft);
+    margin: 0 0 18px;
+  }
+  .about-copy p:last-child { margin-bottom: 0; }
+  .about-copy strong { color: var(--ink); font-weight: 600; }
+
+  @media (max-width: 640px) {
+    .about { grid-template-columns: 1fr; }
+  }
+
+  /* ---------- Pricing ---------- */
+  .price-block { margin-bottom: 64px; }
+  .price-block:last-child { margin-bottom: 0; }
+  .price-block .mono.label {
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: block;
+  }
+  .price-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid var(--line);
+    background: var(--surface);
+  }
+  .price-table th, .price-table td {
+    border: 1px solid var(--line);
+    padding: 16px 18px;
+    text-align: left;
+    vertical-align: top;
+    font-size: 0.93rem;
+  }
+  .price-table thead th {
+    font-family: Rockwell, "Roboto Slab", Georgia, serif;
+    font-size: 1rem;
+    color: var(--ink);
+    background: color-mix(in srgb, var(--accent-deep) 6%, var(--surface));
+  }
+  .price-table .row-label {
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    white-space: nowrap;
+    width: 110px;
+  }
+  .price-table .amount {
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+    font-size: 1.05rem;
+    color: var(--accent-deep);
+    font-weight: 600;
+  }
+  .price-table td, .price-table th { color: var(--ink-soft); }
+  .price-table thead th { color: var(--ink); }
+
+  .price-note {
+    margin-top: 18px;
+    font-size: 0.9rem;
+    color: var(--ink-faint);
+  }
+
+  .table-scroll { overflow-x: auto; }
+
+  @media (max-width: 720px) {
+    .price-table { font-size: 0.85rem; }
+    .price-table th, .price-table td { padding: 12px; }
+  }
+
+  /* ---------- Contact ---------- */
+  .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    align-items: flex-start;
+  }
+  .contact h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); max-width: 22ch; }
+  .contact p { color: var(--ink-soft); max-width: 52ch; }
+  .contact .btn { padding: 14px 26px; font-size: 1rem; }
+  .contact .details {
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.85rem;
+    color: var(--ink-faint);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  /* ---------- Footer ---------- */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 28px 0;
+  }
+  footer .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  footer .mono {
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    color: var(--ink-faint);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+</style>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <span class="mark">RIZZO TECHNOLOGY SOLUTIONS<small>IT CONSULTING &amp; WEB DEVELOPMENT</small></span>
+    </a>
+    <nav class="links">
+      <a class="hide-sm" href="#services">Services</a>
+      <a class="hide-sm" href="#about">About</a>
+      <a class="hide-sm" href="#pricing">Pricing</a>
+      <a class="btn" href="mailto:nickrizzo77277@gmail.com?subject=Project%20inquiry">Book a consult</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero wrap">
+    <div>
+      <p class="eyebrow">IT CONSULTING &middot; WEB DEVELOPMENT</p>
+      <h1 class="slab">Technology that works exactly as promised.</h1>
+      <p class="lede">Rizzo Technology Solutions helps small businesses fix what's broken, build what's missing, and keep both running &mdash; without the jargon, the upsell, or the six-week wait for a callback.</p>
+      <div class="ctas">
+        <a class="btn" href="mailto:nickrizzo77277@gmail.com?subject=Project%20inquiry">Book a free consult</a>
+        <a class="btn ghost" href="#services">See what I do</a>
+      </div>
+    </div>
+    <div class="schematic" aria-hidden="true">
+      <svg viewBox="0 0 300 300" fill="none">
+        <g stroke="var(--line)" stroke-width="1">
+          <line x1="60" y1="60" x2="150" y2="60"/>
+          <line x1="150" y1="60" x2="150" y2="150"/>
+          <line x1="150" y1="150" x2="230" y2="150"/>
+          <line x1="150" y1="150" x2="150" y2="230"/>
+          <line x1="150" y1="150" x2="80" y2="210"/>
+          <line x1="230" y1="150" x2="230" y2="90"/>
+          <line x1="60" y1="60" x2="60" y2="130"/>
+        </g>
+        <g fill="var(--accent-deep)">
+          <circle cx="150" cy="150" r="6"/>
+          <circle cx="60" cy="60" r="4"/>
+          <circle cx="150" cy="60" r="4"/>
+          <circle cx="230" cy="150" r="4"/>
+          <circle cx="150" cy="230" r="4"/>
+          <circle cx="80" cy="210" r="4"/>
+          <circle cx="60" cy="130" r="4"/>
+          <circle cx="230" cy="90" r="4"/>
+        </g>
+        <g fill="var(--accent)">
+          <circle cx="150" cy="150" r="2.4"/>
+        </g>
+      </svg>
+      <span class="tag mono">FIG. 1 &mdash; SYSTEMS &amp; SITES, ONE OWNER</span>
+    </div>
+  </section>
+
+  <section id="services" class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">WHAT I DO</p>
+      <h2 class="slab">Two disciplines, one point of contact.</h2>
+      <p>Most businesses end up with a web developer who doesn't touch hardware and an IT contractor who won't touch code. I do both, so you call one number instead of two.</p>
+    </div>
+    <div class="services-grid">
+      <article class="service-card">
+        <span class="tag mono">SYSTEMS</span>
+        <h3 class="slab">IT Consulting &amp; Support</h3>
+        <p>Network setup and troubleshooting, cybersecurity checkups, cloud migration guidance, hardware and software procurement advice, and a technology roadmap sized to your business &mdash; not an enterprise sales pitch.</p>
+      </article>
+      <article class="service-card">
+        <span class="tag mono">WEB</span>
+        <h3 class="slab">Web Development</h3>
+        <p>Custom-built business websites, redesigns, and web applications. Clean code, fast load times, mobile-first layouts, and a site you can actually log in and update yourself.</p>
+      </article>
+      <article class="service-card">
+        <span class="tag mono">SUPPORT</span>
+        <h3 class="slab">Ongoing Maintenance</h3>
+        <p>Monthly checkups, security patches, backups you can verify, and a direct line when something breaks &mdash; so "the website's down" doesn't become an all-day problem.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="about" class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">ABOUT</p>
+      <h2 class="slab">Hi, I'm Nick Rizzo.</h2>
+    </div>
+    <div class="about">
+      <div class="monogram" aria-hidden="true">NR</div>
+      <div class="about-copy">
+        <p>I started Rizzo Technology Solutions because most small businesses end up choosing between two bad options: an overpriced agency that treats them like a line item, or a freelancer who disappears once the invoice clears. I wanted to build something else &mdash; <strong>a single person you can actually call</strong>, who understands both the code behind your website and the network humming in your back office.</p>
+        <p>Every engagement starts the same way: I ask what's actually slowing you down, not what package I'd like to sell you. Sometimes that's a five-page website. Sometimes it's a two-hour phone call that saves you from a $10,000 mistake.</p>
+        <p>If it plugs in, connects to the internet, or has a URL, I can probably help.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">PRICING</p>
+      <h2 class="slab">What things cost, up front.</h2>
+      <p>No hourly surprises on fixed-scope work, no vague "contact for quote" on everything. Here's the real structure &mdash; final numbers depend on scope, and every project is confirmed before work starts.</p>
+    </div>
+
+    <div class="price-block">
+      <span class="mono label">Web Development &mdash; project-based</span>
+      <div class="table-scroll">
+        <table class="price-table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Starter Site</th>
+              <th scope="col">Business Site</th>
+              <th scope="col">Custom / E-Commerce</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="row-label">Price</td>
+              <td class="amount">$1,200</td>
+              <td class="amount">From $2,800</td>
+              <td class="amount">Custom quote</td>
+            </tr>
+            <tr>
+              <td class="row-label">Best for</td>
+              <td>A clean, professional presence</td>
+              <td>Businesses that update content often</td>
+              <td>Online stores, booking systems, web apps</td>
+            </tr>
+            <tr>
+              <td class="row-label">Includes</td>
+              <td>Up to 5 pages &middot; mobile-responsive &middot; contact form &middot; basic SEO</td>
+              <td>Up to 12 pages &middot; self-editable CMS &middot; advanced SEO &amp; analytics &middot; one integration</td>
+              <td>Everything in Business &middot; payments or booking integration &middot; custom features</td>
+            </tr>
+            <tr>
+              <td class="row-label">Timeline</td>
+              <td>2&ndash;3 weeks</td>
+              <td>4&ndash;6 weeks</td>
+              <td>Scoped per project</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="price-block">
+      <span class="mono label">IT Consulting &amp; Support &mdash; ongoing</span>
+      <div class="table-scroll">
+        <table class="price-table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Pay-as-you-go</th>
+              <th scope="col">Essential Care</th>
+              <th scope="col">Priority Partner</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="row-label">Price</td>
+              <td class="amount">$95/hr</td>
+              <td class="amount">$150/mo</td>
+              <td class="amount">$400/mo</td>
+            </tr>
+            <tr>
+              <td class="row-label">Best for</td>
+              <td>One-off fixes and small projects</td>
+              <td>Businesses that want peace of mind</td>
+              <td>Businesses that can't afford downtime</td>
+            </tr>
+            <tr>
+              <td class="row-label">Includes</td>
+              <td>Troubleshooting &middot; setup &middot; security checkups &middot; procurement advice</td>
+              <td>Monthly system checkup &middot; update management &middot; backup verification &middot; email support</td>
+              <td>Everything in Essential &middot; 4 hrs support included &middot; same-day priority response &middot; quarterly tech review</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <p class="price-note">Every plan starts with a free 20-minute consult &mdash; no obligation, no pressure.</p>
+  </section>
+
+  <section id="contact" class="wrap">
+    <div class="contact">
+      <p class="eyebrow">GET IN TOUCH</p>
+      <h2 class="slab">Tell me what's broken, or what you're building.</h2>
+      <p>Send a note with a rough idea of the project or problem. I read everything myself and reply within one business day.</p>
+      <a class="btn" href="mailto:nickrizzo77277@gmail.com?subject=Project%20inquiry">Email nickrizzo77277@gmail.com</a>
+      <div class="details mono">
+        <span>RESPONSE TIME: 1 BUSINESS DAY</span>
+        <span>REMOTE &amp; ON-SITE AVAILABLE</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="mono">&copy; 2026 RIZZO TECHNOLOGY SOLUTIONS</span>
+    <span class="mono">SITE V.1</span>
+  </div>
+</footer>
