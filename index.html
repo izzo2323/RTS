@@ -1,12 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Rizzo Technology Solutions — IT Consulting &amp; Web Development</title>
+<meta name="description" content="Rizzo Technology Solutions provides IT consulting, support, and web development for small businesses.">
 <style>
   :root {
     --bg: #EEF3F1;
     --surface: #FFFFFF;
     --ink: #16211F;
     --ink-soft: #4B5C58;
-    --ink-faint: #7C8B87;
-    --accent: #B8672E;      /* copper — used on light ground */
+    --ink-faint: #626F6C;
+    --accent: #A25A28;      /* copper — used on light ground */
     --accent-deep: #2F5C55; /* deep teal — used on light ground */
     --line: #C7D6D0;
     --grid-line: rgba(47, 92, 85, 0.08);
@@ -20,7 +26,7 @@
       --surface: #162220;
       --ink: #E7EFEC;
       --ink-soft: #9FB3AD;
-      --ink-faint: #6C8580;
+      --ink-faint: #76908A;
       --accent: #E08A47;
       --accent-deep: #7FC0B2;
       --line: #263631;
@@ -45,8 +51,8 @@
     --surface: #FFFFFF;
     --ink: #16211F;
     --ink-soft: #4B5C58;
-    --ink-faint: #7C8B87;
-    --accent: #B8672E;
+    --ink-faint: #626F6C;
+    --accent: #A25A28;
     --accent-deep: #2F5C55;
     --line: #C7D6D0;
     --grid-line: rgba(47, 92, 85, 0.08);
@@ -81,13 +87,28 @@
     outline-offset: 3px;
   }
 
+  .skip-link {
+    position: absolute;
+    top: -100%;
+    left: 12px;
+    z-index: 100;
+    background: var(--surface);
+    color: var(--ink);
+    padding: 10px 16px;
+    border: 1px solid var(--line);
+  }
+  .skip-link:focus {
+    top: 12px;
+  }
+
   h1, h2, h3 { text-wrap: balance; margin: 0; }
   p { text-wrap: pretty; }
 
   .wrap {
     max-width: 1080px;
     margin: 0 auto;
-    padding: 0 28px;
+    padding-left: 28px;
+    padding-right: 28px;
   }
 
   /* ---------- Header ---------- */
@@ -104,7 +125,8 @@
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    padding: 16px 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
   .brand {
     display: flex;
@@ -202,7 +224,8 @@
 
   /* ---------- Hero ---------- */
   .hero {
-    padding: 76px 0 90px;
+    padding-top: 76px;
+    padding-bottom: 90px;
     display: grid;
     grid-template-columns: 1.15fr 0.85fr;
     gap: 56px;
@@ -413,7 +436,24 @@
   @media (prefers-reduced-motion: reduce) {
     * { animation: none !important; transition: none !important; }
   }
+
+  @media (max-width: 720px) {
+    .wrap { padding-left: 18px; padding-right: 18px; }
+    section { padding: 64px 0; }
+    .hero { padding-top: 48px; padding-bottom: 60px; }
+    .section-head { margin-bottom: 36px; }
+  }
+
+  @media (max-width: 480px) {
+    .nav { flex-wrap: wrap; row-gap: 10px; padding-top: 14px; padding-bottom: 14px; }
+    .brand .mark { font-size: 0.92rem; }
+    nav.links { gap: 14px; }
+  }
 </style>
+</head>
+<body>
+
+<a class="skip-link" href="#top">Skip to content</a>
 
 <header class="site">
   <div class="wrap nav">
@@ -616,3 +656,6 @@
     <span class="mono">SITE V.1</span>
   </div>
 </footer>
+
+</body>
+</html>
