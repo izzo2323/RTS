@@ -415,6 +415,69 @@
     gap: 4px;
   }
 
+  .contact-form-wrap { width: 100%; max-width: 640px; }
+  .contact-form-wrap summary {
+    list-style: none;
+    cursor: pointer;
+    width: fit-content;
+  }
+  .contact-form-wrap summary::-webkit-details-marker { display: none; }
+  .contact-form-wrap[open] summary {
+    background: transparent;
+    color: var(--accent-deep);
+    border-color: var(--line);
+    margin-bottom: 24px;
+  }
+  .contact-form-wrap[open] summary:hover {
+    color: var(--accent);
+    border-color: var(--accent-deep);
+  }
+  .contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding-top: 4px;
+  }
+  .field { display: flex; flex-direction: column; gap: 8px; }
+  .field-wide { grid-column: 1 / -1; }
+  .field label {
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  .field .optional { text-transform: none; letter-spacing: 0; }
+  .field input, .field textarea {
+    font: inherit;
+    font-size: 0.96rem;
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    padding: 11px 13px;
+    border-radius: 0;
+  }
+  .field input:focus-visible, .field textarea:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+    border-color: var(--accent-deep);
+  }
+  .field textarea { resize: vertical; min-height: 100px; }
+  .contact-form button.btn {
+    grid-column: 1 / -1;
+    justify-self: start;
+    border: 1px solid var(--accent-deep);
+  }
+  .form-note {
+    grid-column: 1 / -1;
+    font-size: 0.82rem;
+    color: var(--accent-deep);
+    min-height: 1.2em;
+  }
+  @media (max-width: 640px) {
+    .contact-form { grid-template-columns: 1fr; }
+  }
+
   /* ---------- Footer ---------- */
   footer {
     border-top: 1px solid var(--line);
@@ -464,7 +527,7 @@
       <a class="hide-sm" href="#services">Services</a>
       <a class="hide-sm" href="#about">About</a>
       <a class="hide-sm" href="#pricing">Pricing</a>
-      <a class="btn" href="mailto:nickrizzo77277@gmail.com?subject=Project%20inquiry">Book a consult</a>
+      <a class="btn" href="#contact-form">Book a consult</a>
     </nav>
   </div>
 </header>
@@ -476,7 +539,7 @@
       <h1 class="slab">Technology that works exactly as promised.</h1>
       <p class="lede">Rizzo Technology Solutions helps small businesses fix what's broken, build what's missing, and keep both running &mdash; without the jargon, the upsell, or the six-week wait for a callback.</p>
       <div class="ctas">
-        <a class="btn" href="mailto:nickrizzo77277@gmail.com?subject=Project%20inquiry">Book a free consult</a>
+        <a class="btn" href="#contact-form">Book a free consult</a>
         <a class="btn ghost" href="#services">See what I do</a>
       </div>
     </div>
@@ -640,8 +703,34 @@
     <div class="contact">
       <p class="eyebrow">GET IN TOUCH</p>
       <h2 class="slab">Tell me what's broken, or what you're building.</h2>
-      <p>Send a note with a rough idea of the project or problem. I read everything myself and reply within one business day.</p>
-      <a class="btn" href="mailto:nickrizzo77277@gmail.com?subject=Project%20inquiry">Email nickrizzo77277@gmail.com</a>
+      <p>Share a few details below and I'll follow up within one business day.</p>
+
+      <details class="contact-form-wrap">
+        <summary class="btn">Start a project</summary>
+        <div id="contact-form">
+          <form id="contact-form-el" class="contact-form" novalidate>
+            <div class="field">
+              <label for="cf-name">Name</label>
+              <input type="text" id="cf-name" name="name" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="cf-email">Email</label>
+              <input type="email" id="cf-email" name="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="cf-phone">Phone <span class="optional">(optional)</span></label>
+              <input type="tel" id="cf-phone" name="phone" autocomplete="tel">
+            </div>
+            <div class="field field-wide">
+              <label for="cf-message">What are you looking to achieve?</label>
+              <textarea id="cf-message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send inquiry</button>
+            <p class="form-note mono" id="contact-form-note" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </details>
+
       <div class="details mono">
         <span>RESPONSE TIME: 1 BUSINESS DAY</span>
         <span>REMOTE &amp; ON-SITE AVAILABLE</span>
@@ -656,6 +745,52 @@
     <span class="mono">SITE V.1</span>
   </div>
 </footer>
+
+<script>
+(function () {
+  var wrap = document.querySelector('.contact-form-wrap');
+  var form = document.getElementById('contact-form-el');
+  var note = document.getElementById('contact-form-note');
+  if (!wrap || !form) return;
+
+  function openForm() { wrap.open = true; }
+  if (location.hash === '#contact-form') openForm();
+  window.addEventListener('hashchange', function () {
+    if (location.hash === '#contact-form') openForm();
+  });
+  wrap.addEventListener('toggle', function () {
+    if (wrap.open) {
+      var first = document.getElementById('cf-name');
+      if (first) first.focus();
+    }
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = form.name.value.trim();
+    var email = form.email.value.trim();
+    var phone = form.phone.value.trim();
+    var message = form.message.value.trim();
+    if (!name || !email || !message) {
+      note.textContent = 'Please fill in your name, email, and a short description.';
+      return;
+    }
+    var user = ['nickrizzo77277', 'gmail.com'];
+    var to = user[0] + '@' + user[1];
+    var subject = 'Project inquiry from ' + name;
+    var body = [
+      'Name: ' + name,
+      'Email: ' + email,
+      'Phone: ' + (phone || 'Not provided'),
+      '',
+      message
+    ].join('\n');
+    var mailto = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    window.location.href = mailto;
+    note.textContent = 'Opening your email client to send this to ' + to + '. If nothing happens, email that address directly with the details above.';
+  });
+})();
+</script>
 
 </body>
 </html>
