@@ -1,54 +1,54 @@
 :root {
-  --bg: #EEF3F1;
+  --bg: #EBF1F6;
   --surface: #FFFFFF;
-  --ink: #16211F;
-  --ink-soft: #4B5C58;
-  --ink-faint: #626F6C;
-  --accent: #A25A28;      /* copper — used on light ground */
-  --accent-deep: #2F5C55; /* deep teal — used on light ground */
-  --line: #C7D6D0;
-  --grid-line: rgba(47, 92, 85, 0.08);
-  --btn-ink: #F5EFE7;
-  --shadow: 0 1px 0 rgba(22, 33, 31, 0.05);
+  --ink: #121A22;
+  --ink-soft: #46535F;
+  --ink-faint: #5C6975;
+  --accent: #1A6BBF;      /* mid blue — used on light ground */
+  --accent-deep: #0B4A80; /* deep navy blue — used on light ground */
+  --line: #C5D2DE;
+  --grid-line: rgba(11, 74, 128, 0.08);
+  --btn-ink: #EFF4F9;
+  --shadow: 0 1px 0 rgba(18, 26, 34, 0.05);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #0E1716;
-    --surface: #162220;
-    --ink: #E7EFEC;
-    --ink-soft: #9FB3AD;
-    --ink-faint: #76908A;
-    --accent: #E08A47;
-    --accent-deep: #7FC0B2;
-    --line: #263631;
-    --grid-line: rgba(127, 192, 178, 0.08);
-    --btn-ink: #10201D;
+    --bg: #0A121C;
+    --surface: #121F2E;
+    --ink: #E6ECF3;
+    --ink-soft: #93A3B5;
+    --ink-faint: #6D7E90;
+    --accent: #4C8FE6;
+    --accent-deep: #4FB2F5;
+    --line: #1F2E40;
+    --grid-line: rgba(79, 178, 245, 0.08);
+    --btn-ink: #0A121C;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #0E1716;
-  --surface: #162220;
-  --ink: #E7EFEC;
-  --ink-soft: #9FB3AD;
-  --ink-faint: #6C8580;
-  --accent: #E08A47;
-  --accent-deep: #7FC0B2;
-  --line: #263631;
-  --grid-line: rgba(127, 192, 178, 0.08);
-  --btn-ink: #10201D;
+  --bg: #0A121C;
+  --surface: #121F2E;
+  --ink: #E6ECF3;
+  --ink-soft: #93A3B5;
+  --ink-faint: #6D7E90;
+  --accent: #4C8FE6;
+  --accent-deep: #4FB2F5;
+  --line: #1F2E40;
+  --grid-line: rgba(79, 178, 245, 0.08);
+  --btn-ink: #0A121C;
 }
 :root[data-theme="light"] {
-  --bg: #EEF3F1;
+  --bg: #EBF1F6;
   --surface: #FFFFFF;
-  --ink: #16211F;
-  --ink-soft: #4B5C58;
-  --ink-faint: #626F6C;
-  --accent: #A25A28;
-  --accent-deep: #2F5C55;
-  --line: #C7D6D0;
-  --grid-line: rgba(47, 92, 85, 0.08);
-  --btn-ink: #F5EFE7;
+  --ink: #121A22;
+  --ink-soft: #46535F;
+  --ink-faint: #5C6975;
+  --accent: #1A6BBF;
+  --accent-deep: #0B4A80;
+  --line: #C5D2DE;
+  --grid-line: rgba(11, 74, 128, 0.08);
+  --btn-ink: #EFF4F9;
 }
 
 * { box-sizing: border-box; }
@@ -126,6 +126,12 @@ header.site {
   gap: 10px;
   text-decoration: none;
   color: var(--ink);
+}
+.brand-mark {
+  width: 56px;
+  height: 56px;
+  align-self: center;
+  flex-shrink: 0;
 }
 .brand .mark {
   font-family: Rockwell, "Roboto Slab", Georgia, serif;
@@ -447,7 +453,7 @@ footer .mono {
   position: fixed;
   inset: 0;
   z-index: 100;
-  background: rgba(14, 23, 22, 0.55);
+  background: rgba(10, 18, 28, 0.55);
   display: flex;
   align-items: center;
   justify-content: center;
