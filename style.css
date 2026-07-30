@@ -308,16 +308,12 @@ section + section { border-top: 1px solid var(--line); }
   gap: 48px;
   align-items: start;
 }
-.monogram {
+.about-photo {
   width: 128px;
   height: 128px;
   border: 1px solid var(--line);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: Rockwell, "Roboto Slab", Georgia, serif;
-  font-size: 2rem;
-  color: var(--accent-deep);
+  display: block;
+  object-fit: cover;
   background: var(--surface);
 }
 .about-copy p {
