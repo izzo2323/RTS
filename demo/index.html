@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio Demos — Rizzo Technology Solutions</title>
+<meta name="robots" content="noindex, nofollow">
+<style>
+  :root {
+    --bg: #EEF3F1;
+    --surface: #FFFFFF;
+    --ink: #16211F;
+    --ink-soft: #4B5C58;
+    --ink-faint: #626F6C;
+    --accent: #A25A28;
+    --accent-deep: #2F5C55;
+    --line: #C7D6D0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0E1716; --surface: #162220; --ink: #E7EFEC;
+      --ink-soft: #9FB3AD; --ink-faint: #76908A;
+      --accent: #E08A47; --accent-deep: #7FC0B2; --line: #263631;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Avenir Next", "Century Gothic", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 90px 28px 100px; }
+  .mono { font-family: "SF Mono", Menlo, Consolas, monospace; }
+  .eyebrow {
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent-deep);
+  }
+  h1 { font-family: Rockwell, "Roboto Slab", Georgia, serif; font-size: clamp(1.9rem, 4vw, 2.6rem); margin: 16px 0 0; }
+  p.lede { color: var(--ink-soft); max-width: 60ch; margin-top: 16px; font-size: 1.02rem; }
+  .grid { margin-top: 56px; display: grid; grid-template-columns: 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); }
+  .card {
+    background: var(--surface);
+    display: flex; justify-content: space-between; align-items: center; gap: 20px;
+    padding: 28px 30px; text-decoration: none; color: var(--ink);
+  }
+  .card:hover { background: color-mix(in srgb, var(--accent-deep) 6%, var(--surface)); }
+  .card .name { font-family: Rockwell, "Roboto Slab", Georgia, serif; font-size: 1.2rem; }
+  .card .tag { font-size: 0.9rem; color: var(--ink-faint); margin-top: 6px; }
+  .card .go { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 0.8rem; color: var(--accent-deep); white-space: nowrap; }
+  footer { margin-top: 60px; font-size: 0.82rem; color: var(--ink-faint); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="eyebrow">INTERNAL &middot; NOT LINKED FROM SITE</p>
+    <h1>Portfolio demos</h1>
+    <p class="lede">Reference examples for prospective clients — each built as a standalone, self-contained single-page site to show range across industries. Send the direct link when it's useful in a conversation.</p>
+    <div class="grid">
+      <a class="card" href="/demo/restaurant/">
+        <div>
+          <div class="name">Ember &amp; Oak</div>
+          <div class="tag">Wood-fired restaurant &mdash; warm, editorial, hearth-driven</div>
+        </div>
+        <span class="go mono">VIEW &rarr;</span>
+      </a>
+      <a class="card" href="/demo/landscaping/">
+        <div>
+          <div class="name">Greenline Landscaping &amp; Design</div>
+          <div class="tag">Local service business &mdash; clean, trust-building, quote-focused</div>
+        </div>
+        <span class="go mono">VIEW &rarr;</span>
+      </a>
+      <a class="card" href="/demo/photography/">
+        <div>
+          <div class="name">Wren &amp; Field Photography</div>
+          <div class="tag">Wedding &amp; portrait studio &mdash; minimal, image-forward, editorial</div>
+        </div>
+        <span class="go mono">VIEW &rarr;</span>
+      </a>
+    </div>
+    <footer class="mono">RIZZO TECHNOLOGY SOLUTIONS &middot; PORTFOLIO INDEX</footer>
+  </div>
+</body>
+</html>
