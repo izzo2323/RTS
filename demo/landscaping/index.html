@@ -104,7 +104,7 @@
   .hero .trust .l { font-size: 0.76rem; color: var(--ink-faint); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 2px; }
 
   .hero-art { aspect-ratio: 4/3.4; background: var(--sky); border: 1px solid var(--line); position: relative; overflow: hidden; }
-  .hero-art svg { width: 100%; height: 100%; }
+  .hero-art img { width: 100%; height: 100%; object-fit: cover; display: block; }
   @media (max-width: 900px) { .hero { grid-template-columns: 1fr; } }
 
   section { padding: 84px 0; }
@@ -143,8 +143,8 @@
   .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
   @media (max-width: 760px) { .gallery-grid { grid-template-columns: 1fr 1fr; } }
   @media (max-width: 520px) { .gallery-grid { grid-template-columns: 1fr; } }
-  .g-card { border: 1px solid var(--line); background: var(--surface); }
-  .g-art { aspect-ratio: 4/3; background: linear-gradient(150deg, var(--gc1), var(--gc2)); }
+  .g-card { border: 1px solid var(--line); background: var(--surface); overflow: hidden; }
+  .g-art { aspect-ratio: 4/3; width: 100%; object-fit: cover; display: block; }
   .g-cap { padding: 14px 16px; }
   .g-cap .t { font-weight: 600; font-size: 0.94rem; }
   .g-cap .l { font-size: 0.8rem; color: var(--ink-faint); margin-top: 2px; }
@@ -237,18 +237,8 @@
         <div><span class="n">4.9★</span><span class="l">Average Rating</span></div>
       </div>
     </div>
-    <div class="hero-art" aria-hidden="true">
-      <svg viewBox="0 0 400 340" preserveAspectRatio="xMidYMid slice">
-        <rect width="400" height="340" fill="#E4EEE0"/>
-        <path d="M0 240 Q 100 200 200 235 T 400 220 V 340 H 0 Z" fill="#B7CDA9"/>
-        <path d="M0 270 Q 120 245 220 270 T 400 260 V 340 H 0 Z" fill="#8FAE7C"/>
-        <circle cx="90" cy="150" r="34" fill="#3C6B3F"/>
-        <rect x="86" y="180" width="8" height="40" fill="#6B4A2F"/>
-        <circle cx="310" cy="120" r="46" fill="#4C7E4F"/>
-        <rect x="304" y="160" width="12" height="55" fill="#6B4A2F"/>
-        <circle cx="230" cy="95" r="26" fill="#5C8B58"/>
-        <rect x="226" y="118" width="7" height="32" fill="#6B4A2F"/>
-      </svg>
+    <div class="hero-art">
+      <img src="images/hero.jpg" alt="Greenline crew member mowing a freshly striped lawn" loading="lazy">
     </div>
   </section>
 
@@ -312,15 +302,15 @@
     </div>
     <div class="gallery-grid">
       <div class="g-card">
-        <div class="g-art" style="--gc1:#3C6B3F; --gc2:#8FAE7C;"></div>
+        <img class="g-art" src="images/gallery-patio.jpg" alt="Paver patio with fire pit and seating" loading="lazy">
         <div class="g-cap"><div class="t">Paver Patio &amp; Fire Pit</div><div class="l">Maple Ridge, Cedar Falls</div></div>
       </div>
       <div class="g-card">
-        <div class="g-art" style="--gc1:#B4703C; --gc2:#DCC7A8;"></div>
+        <img class="g-art" src="images/gallery-frontyard.jpg" alt="Front yard garden redesign with manicured shrubs" loading="lazy">
         <div class="g-cap"><div class="t">Front Yard Redesign</div><div class="l">Elm Street, Cedar Falls</div></div>
       </div>
       <div class="g-card">
-        <div class="g-art" style="--gc1:#24462A; --gc2:#6B9066;"></div>
+        <img class="g-art" src="images/gallery-wall.jpg" alt="Stone retaining wall and wood terrace deck" loading="lazy">
         <div class="g-cap"><div class="t">Retaining Wall &amp; Terrace</div><div class="l">Hollow Creek Estates</div></div>
       </div>
     </div>

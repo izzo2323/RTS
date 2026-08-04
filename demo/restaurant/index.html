@@ -169,14 +169,12 @@
   @media (max-width: 860px) { .hearth { grid-template-columns: 1fr; } }
   .hearth-art {
     aspect-ratio: 4/5;
-    background:
-      radial-gradient(circle at 30% 30%, rgba(232,129,63,0.35), transparent 55%),
-      linear-gradient(160deg, var(--surface-2), var(--surface));
+    background: var(--surface-2);
     border: 1px solid var(--line);
     position: relative;
     overflow: hidden;
   }
-  .hearth-art svg { width: 100%; height: 100%; }
+  .hearth-art img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .hearth-copy p { color: var(--ink-soft); margin-bottom: 18px; max-width: 56ch; }
   .hearth-copy p:last-child { margin-bottom: 0; }
   .hearth-copy strong { color: var(--ink); }
@@ -185,14 +183,22 @@
   .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; }
   .gallery-grid .tile {
     aspect-ratio: 1;
-    background: linear-gradient(145deg, var(--tc1), var(--tc2));
+    background: var(--surface-2);
     position: relative;
+    overflow: hidden;
+  }
+  .gallery-grid .tile img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .gallery-grid .tile::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(0deg, rgba(0,0,0,0.6) 0%, transparent 42%);
+    pointer-events: none;
   }
   .gallery-grid .tile span {
-    position: absolute; bottom: 10px; left: 12px;
+    position: absolute; bottom: 10px; left: 12px; z-index: 1;
     font-family: "Futura","Century Gothic",sans-serif;
     font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase;
-    color: rgba(243,234,224,0.75);
+    color: rgba(243,234,224,0.92);
   }
   @media (max-width: 760px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
 
@@ -330,17 +336,7 @@
   <section id="hearth" class="wrap">
     <div class="hearth">
       <div class="hearth-art">
-        <svg viewBox="0 0 300 360" preserveAspectRatio="xMidYMid slice">
-          <rect x="0" y="0" width="300" height="360" fill="none"/>
-          <g stroke="var(--gold)" stroke-width="1" opacity="0.5">
-            <line x1="20" y1="40" x2="280" y2="40"/>
-            <line x1="20" y1="320" x2="280" y2="320"/>
-            <line x1="20" y1="40" x2="20" y2="320"/>
-            <line x1="280" y1="40" x2="280" y2="320"/>
-          </g>
-          <path d="M150 120 C 110 170, 100 210, 140 250 C 160 270, 180 250, 170 225 C 200 240, 210 280, 170 310" stroke="var(--ember-bright)" stroke-width="2.5" fill="none"/>
-          <circle cx="150" cy="180" r="3" fill="var(--gold)"/>
-        </svg>
+        <img src="images/hearth.jpg" alt="Fire burning in Ember & Oak's wood-fired hearth" loading="lazy">
       </div>
       <div class="hearth-copy">
         <p class="label" style="color:var(--gold); margin-bottom:14px; display:block;">OUR HEARTH</p>
@@ -358,10 +354,10 @@
       <h2 class="display">A look inside.</h2>
     </div>
     <div class="gallery-grid">
-      <div class="tile" style="--tc1:#C8622F; --tc2:#241C18;"><span>THE HEARTH</span></div>
-      <div class="tile" style="--tc1:#8F7C6C; --tc2:#1B1512;"><span>DINING ROOM</span></div>
-      <div class="tile" style="--tc1:#C9A25C; --tc2:#2C2219;"><span>THE PASS</span></div>
-      <div class="tile" style="--tc1:#E8813F; --tc2:#241C18;"><span>BAR SEATING</span></div>
+      <div class="tile"><img src="images/gallery-hearth.jpg" alt="Flames beneath a pot on the open hearth" loading="lazy"><span>THE HEARTH</span></div>
+      <div class="tile"><img src="images/gallery-dining.jpg" alt="Ember & Oak's dining room with warm pendant lighting" loading="lazy"><span>DINING ROOM</span></div>
+      <div class="tile"><img src="images/gallery-pass.jpg" alt="A cook plating a dish at the pass" loading="lazy"><span>THE PASS</span></div>
+      <div class="tile"><img src="images/gallery-bar.jpg" alt="Bar seating along the wood counter" loading="lazy"><span>BAR SEATING</span></div>
     </div>
   </section>
 
