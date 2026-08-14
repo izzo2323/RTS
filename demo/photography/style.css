@@ -118,7 +118,8 @@ section + section { border-top: 1px solid var(--line); }
 /* Intro */
 .intro { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 70px; align-items: center; }
 @media (max-width: 860px) { .intro { grid-template-columns: 1fr; gap: 40px; } }
-.intro-art { aspect-ratio: 4/5; background: linear-gradient(160deg, #C9BBA3, #8A7A62); }
+.intro-art { aspect-ratio: 4/5; background: var(--line); overflow: hidden; }
+.intro-art img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .intro-copy p { color: var(--ink-soft); margin-bottom: 20px; max-width: 58ch; }
 .intro-copy p:last-child { margin-bottom: 0; }
 .intro-copy .sign { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: 1.4rem; margin-top: 24px; color: var(--ink); }
@@ -155,7 +156,8 @@ section + section { border-top: 1px solid var(--line); }
 .masonry .m-item .ph {
   width: 100%;
   display: block;
-  background: linear-gradient(155deg, var(--c1), var(--c2));
+  object-fit: cover;
+  background: var(--line);
 }
 .masonry .m-item .cap {
   position: absolute; bottom: 0; left: 0; right: 0;
@@ -216,13 +218,15 @@ section + section { border-top: 1px solid var(--line); }
 .journal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; }
 @media (max-width: 860px) { .journal-grid { grid-template-columns: 1fr; } }
 .post-card { text-decoration: none; color: inherit; display: block; }
-.post-card .ph { aspect-ratio: 4/3; background: linear-gradient(155deg, var(--c1), var(--c2)); margin-bottom: 18px; }
+.post-card .ph { aspect-ratio: 4/3; background: var(--line); margin-bottom: 18px; overflow: hidden; }
+.post-card .ph img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .post-card .eyebrow { margin-bottom: 8px; }
 .post-card h3 { font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.35rem; }
 .post-card p { color: var(--ink-soft); font-size: 0.92rem; margin-top: 10px; }
 .post-card .read-more { display: inline-block; margin-top: 14px; font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
 
-.post-hero-art { aspect-ratio: 16/8; background: linear-gradient(155deg, var(--c1), var(--c2)); margin-top: 50px; }
+.post-hero-art { aspect-ratio: 16/8; background: var(--line); margin-top: 50px; overflow: hidden; }
+.post-hero-art img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .post-body { max-width: 68ch; margin: 50px auto 0; }
 .post-body p { color: var(--ink-soft); margin-bottom: 22px; font-size: 1.02rem; }
 .post-body p:last-child { margin-bottom: 0; }
