@@ -6,200 +6,20 @@
 <title>Wren &amp; Field Photography — Wedding &amp; Portrait, Hudson Valley</title>
 <meta name="description" content="Wren & Field is a wedding and portrait photography studio based in the Hudson Valley, shooting timeless, editorial-style imagery.">
 <meta name="robots" content="noindex, nofollow">
-<style>
-  :root {
-    --bg: #FAF9F6;
-    --surface: #FFFFFF;
-    --ink: #232220;
-    --ink-soft: #635F58;
-    --ink-faint: #9B968C;
-    --line: #E6E2D8;
-    --accent: #A8825F;
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font-family: "Helvetica Neue", "Segoe UI", Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.7;
-    -webkit-font-smoothing: antialiased;
-    font-weight: 300;
-  }
-  .serif { font-family: "Cormorant Garamond", "Iowan Old Style", Georgia, "Times New Roman", serif; }
-  a { color: var(--ink); }
-  h1, h2, h3 { margin: 0; text-wrap: balance; font-weight: 400; }
-  p { margin: 0; text-wrap: pretty; }
-  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
-  .eyebrow {
-    font-size: 0.68rem;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-    color: var(--ink-faint);
-  }
-
-  header.site {
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    z-index: 30;
-    color: #F4F0E8;
-  }
-  .nav { display: flex; align-items: center; justify-content: space-between; padding-top: 30px; padding-bottom: 30px; gap: 20px; }
-  .brand { text-decoration: none; color: inherit; }
-  .brand .mark { font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.5rem; letter-spacing: 0.04em; }
-  nav.links { display: flex; align-items: center; gap: 34px; }
-  nav.links a { color: inherit; text-decoration: none; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; }
-  nav.links a:hover { color: var(--accent); }
-  .btn {
-    display: inline-flex; align-items: center;
-    border: 1px solid currentColor;
-    padding: 11px 24px;
-    font-size: 0.78rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: inherit;
-  }
-  .btn:hover { background: var(--ink); color: var(--bg); border-color: var(--ink); }
-  @media (max-width: 780px) { nav.links a.hide-sm { display: none; } }
-
-  /* Hero */
-  .hero {
-    position: relative;
-    height: 92vh;
-    min-height: 560px;
-    display: flex;
-    align-items: flex-end;
-    color: #F4F0E8;
-    overflow: hidden;
-  }
-  .hero .bg {
-    position: absolute; inset: 0;
-    background:
-      linear-gradient(180deg, rgba(20,18,15,0.15) 0%, rgba(20,18,15,0.65) 100%),
-      linear-gradient(135deg, #6B5A47 0%, #3E362C 45%, #1E1A15 100%);
-  }
-  .hero .bg svg { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.5; }
-  .hero-content { position: relative; padding-bottom: 70px; width: 100%; }
-  .hero .eyebrow { color: #D9CBB5; }
-  .hero h1 { font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(2.6rem, 7vw, 5.2rem); margin-top: 16px; font-weight: 300; letter-spacing: 0.01em; }
-  .hero p.lede { margin-top: 18px; max-width: 44ch; color: #D9CBB5; font-size: 1.02rem; }
-  .hero .ctas { margin-top: 34px; display: flex; gap: 16px; flex-wrap: wrap; }
-  .hero .btn { color: #F4F0E8; }
-  .hero .btn:hover { background: #F4F0E8; color: #1E1A15; }
-
-  section { padding: 110px 0; }
-  section + section { border-top: 1px solid var(--line); }
-  .section-head { max-width: 560px; }
-  .section-head.center { margin: 0 auto 60px; text-align: center; }
-  .section-head h2 { font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(2rem, 4vw, 2.8rem); margin-top: 14px; font-weight: 400; }
-  .section-head p { margin-top: 16px; color: var(--ink-soft); max-width: 56ch; }
-
-  /* Intro */
-  .intro { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 70px; align-items: center; }
-  @media (max-width: 860px) { .intro { grid-template-columns: 1fr; gap: 40px; } }
-  .intro-art { aspect-ratio: 4/5; background: linear-gradient(160deg, #C9BBA3, #8A7A62); }
-  .intro-copy p { color: var(--ink-soft); margin-bottom: 20px; max-width: 58ch; }
-  .intro-copy p:last-child { margin-bottom: 0; }
-  .intro-copy .sign { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: 1.4rem; margin-top: 24px; color: var(--ink); }
-
-  /* Portfolio masonry */
-  .masonry {
-    columns: 3 280px;
-    column-gap: 14px;
-  }
-  .masonry .m-item {
-    break-inside: avoid;
-    margin-bottom: 14px;
-    position: relative;
-    overflow: hidden;
-  }
-  .masonry .m-item .ph {
-    width: 100%;
-    display: block;
-    background: linear-gradient(155deg, var(--c1), var(--c2));
-  }
-  .masonry .m-item .cap {
-    position: absolute; bottom: 0; left: 0; right: 0;
-    padding: 16px 18px;
-    background: linear-gradient(0deg, rgba(0,0,0,0.55), transparent);
-    color: #F4F0E8;
-    font-size: 0.78rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    opacity: 0;
-    transition: opacity 0.2s;
-  }
-  .masonry .m-item:hover .cap { opacity: 1; }
-
-  /* Packages */
-  .pkg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
-  @media (max-width: 860px) { .pkg-grid { grid-template-columns: 1fr; } }
-  .pkg { background: var(--surface); padding: 40px 34px; display: flex; flex-direction: column; }
-  .pkg.featured { background: var(--ink); color: var(--bg); }
-  .pkg .eyebrow { margin-bottom: 8px; }
-  .pkg.featured .eyebrow { color: #C9BBA3; }
-  .pkg h3 { font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.6rem; margin-top: 6px; }
-  .pkg .price { font-family: "Cormorant Garamond", Georgia, serif; font-size: 2.2rem; margin-top: 14px; }
-  .pkg .price span { font-size: 0.9rem; color: var(--ink-faint); font-family: inherit; }
-  .pkg.featured .price span { color: #B3A88F; }
-  .pkg ul { list-style: none; margin: 24px 0 0; padding: 0; display: flex; flex-direction: column; gap: 11px; flex: 1; }
-  .pkg li { font-size: 0.9rem; color: var(--ink-soft); padding-left: 18px; position: relative; }
-  .pkg.featured li { color: #D9D2C4; }
-  .pkg li::before { content: "—"; position: absolute; left: 0; color: var(--accent); }
-  .pkg .btn { margin-top: 30px; align-self: flex-start; }
-  .pkg.featured .btn { color: var(--bg); }
-  .pkg.featured .btn:hover { background: var(--bg); color: var(--ink); }
-
-  /* Testimonial */
-  .quote-block { text-align: center; max-width: 760px; margin: 0 auto; }
-  .quote-block p.q { font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(1.4rem, 3vw, 2rem); font-style: italic; line-height: 1.5; color: var(--ink); }
-  .quote-block .who { margin-top: 26px; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); }
-
-  /* Contact */
-  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; }
-  @media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; gap: 40px; } }
-  .contact-grid h2 { font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 400; }
-  .contact-grid p.lede2 { margin-top: 16px; color: var(--ink-soft); max-width: 46ch; }
-  .contact-details { display: flex; flex-direction: column; gap: 18px; margin-top: 30px; }
-  .contact-details .row .k { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); }
-  .contact-details .row .v { font-size: 1.05rem; margin-top: 4px; }
-  form.inquiry { display: flex; flex-direction: column; gap: 18px; }
-  form.inquiry label { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); display: block; margin-bottom: 8px; }
-  form.inquiry input, form.inquiry select, form.inquiry textarea {
-    width: 100%; border: none; border-bottom: 1px solid var(--line);
-    background: transparent; padding: 10px 2px; font-family: inherit; font-size: 0.98rem; color: var(--ink);
-  }
-  form.inquiry input:focus, form.inquiry select:focus, form.inquiry textarea:focus { outline: none; border-color: var(--accent); }
-  form.inquiry button { margin-top: 6px; align-self: flex-start; }
-
-  footer { padding: 40px 0; }
-  footer .wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
-  footer .mark { font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.1rem; }
-  footer .social { display: flex; gap: 22px; }
-  footer .social a { font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; color: var(--ink-soft); }
-  footer .social a:hover { color: var(--accent); }
-
-  .demo-tag {
-    position: fixed; bottom: 14px; right: 14px; z-index: 40;
-    background: rgba(255,255,255,0.92); border: 1px solid var(--line); color: var(--ink-faint);
-    font-size: 0.72rem; padding: 8px 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  }
-  .demo-tag a { color: var(--accent); font-weight: 600; }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="site">
   <div class="wrap nav">
-    <a class="brand" href="#top"><span class="mark">Wren &amp; Field</span></a>
+    <a class="brand" href="index.html"><span class="mark">Wren &amp; Field</span></a>
     <nav class="links">
-      <a class="hide-sm" href="#portfolio">Portfolio</a>
-      <a class="hide-sm" href="#about">About</a>
-      <a class="hide-sm" href="#packages">Packages</a>
-      <a class="btn" href="#contact">Inquire</a>
+      <a class="hide-sm active" href="index.html">Home</a>
+      <a class="hide-sm" href="portfolio.html">Portfolio</a>
+      <a class="hide-sm" href="about.html">About</a>
+      <a class="hide-sm" href="packages.html">Packages</a>
+      <a class="hide-sm" href="journal.html">Journal</a>
+      <a class="btn" href="contact.html">Inquire</a>
     </nav>
   </div>
 </header>
@@ -217,13 +37,13 @@
       <h1 class="serif">Photographs that feel like memory, not performance.</h1>
       <p class="lede">Wren &amp; Field is a small photography studio shooting weddings, engagements, and portraits across the Hudson Valley &mdash; documentary-first, editorial in the edit.</p>
       <div class="ctas">
-        <a class="btn" href="#contact">Check Your Date</a>
-        <a class="btn" href="#portfolio">View Portfolio</a>
+        <a class="btn" href="contact.html">Check Your Date</a>
+        <a class="btn" href="portfolio.html">View Portfolio</a>
       </div>
     </div>
   </section>
 
-  <section id="about" class="wrap">
+  <section class="wrap">
     <div class="intro">
       <div class="intro-art" aria-hidden="true"></div>
       <div class="intro-copy">
@@ -231,12 +51,12 @@
         <h2 class="serif" style="font-size: clamp(1.8rem, 3.4vw, 2.4rem); margin: 14px 0 22px;">Hi, I'm Mara — I shoot Wren &amp; Field.</h2>
         <p>I started Wren &amp; Field after seven years shooting editorial work for regional magazines. I bring the same instinct here: quiet observation over posed perfection, natural light over flash, real moments over a shot list.</p>
         <p>I shoot around 18 weddings a year so that every one gets full attention &mdash; from the first call through the delivered gallery, it's just me, sometimes with a second shooter for larger days.</p>
-        <p class="sign">— Mara Ellison</p>
+        <a class="post-card read-more" href="about.html" style="margin-top:8px;">More about the studio &rarr;</a>
       </div>
     </div>
   </section>
 
-  <section id="portfolio" class="wrap">
+  <section class="wrap">
     <div class="section-head">
       <p class="eyebrow">SELECTED WORK</p>
       <h2 class="serif">A few recent favorites.</h2>
@@ -249,53 +69,8 @@
       <div class="m-item"><div class="ph" style="--c1:#6B5A47; --c2:#1E1A15; height:300px;"></div><div class="cap">Details — Rivertown Inn</div></div>
       <div class="m-item"><div class="ph" style="--c1:#A8825F; --c2:#4A3E30; height:260px;"></div><div class="cap">First Look — Millbrook Vineyard</div></div>
     </div>
-  </section>
-
-  <section id="packages" class="wrap">
-    <div class="section-head center">
-      <p class="eyebrow">INVESTMENT</p>
-      <h2 class="serif">Wedding collections.</h2>
-      <p>Every collection includes a full-resolution online gallery, print release, and an engagement session. Custom collections available on request.</p>
-    </div>
-    <div class="pkg-grid">
-      <div class="pkg">
-        <span class="eyebrow">HALF DAY</span>
-        <h3 class="serif">The Elopement</h3>
-        <div class="price">$2,400 <span>/ 6 hours</span></div>
-        <ul>
-          <li>One photographer, 6 hours coverage</li>
-          <li>Online gallery, 300+ images</li>
-          <li>Engagement mini-session</li>
-          <li>Print release included</li>
-        </ul>
-        <a class="btn" href="#contact">Inquire</a>
-      </div>
-      <div class="pkg featured">
-        <span class="eyebrow">MOST BOOKED</span>
-        <h3 class="serif">The Full Day</h3>
-        <div class="price">$4,200 <span>/ 10 hours</span></div>
-        <ul>
-          <li>One photographer, 10 hours coverage</li>
-          <li>Second shooter included</li>
-          <li>Online gallery, 600+ images</li>
-          <li>Engagement session &amp; guided planning call</li>
-          <li>Heirloom-quality print release</li>
-        </ul>
-        <a class="btn" href="#contact">Inquire</a>
-      </div>
-      <div class="pkg">
-        <span class="eyebrow">FULL WEEKEND</span>
-        <h3 class="serif">The Weekend</h3>
-        <div class="price">$6,800 <span>/ 2 days</span></div>
-        <ul>
-          <li>Rehearsal dinner + wedding day coverage</li>
-          <li>Second shooter included</li>
-          <li>Online gallery, 900+ images</li>
-          <li>Engagement session, guided planning, day-of timeline help</li>
-          <li>Printed album included</li>
-        </ul>
-        <a class="btn" href="#contact">Inquire</a>
-      </div>
+    <div style="text-align:center; margin-top:50px;">
+      <a class="btn" href="portfolio.html">View Full Portfolio</a>
     </div>
   </section>
 
@@ -305,37 +80,15 @@
       <p class="who">Elena &amp; Sam, Married October 2025</p>
     </div>
   </section>
-
-  <section id="contact" class="wrap">
-    <div class="contact-grid">
-      <div>
-        <p class="eyebrow">GET IN TOUCH</p>
-        <h2 class="serif">Let's talk about your day.</h2>
-        <p class="lede2">Tell me your date and venue and I'll let you know availability within a day or two.</p>
-        <div class="contact-details">
-          <div class="row"><div class="k">Email</div><div class="v">hello@wrenandfield-demo.com</div></div>
-          <div class="row"><div class="k">Phone</div><div class="v">(555) 610-4477</div></div>
-          <div class="row"><div class="k">Studio</div><div class="v">Based in Rhinebeck, NY &mdash; travels regionally</div></div>
-        </div>
-      </div>
-      <form class="inquiry" onsubmit="return false;">
-        <div><label for="name">Full Name</label><input id="name" type="text" placeholder="Elena Marsh"></div>
-        <div><label for="date">Wedding / Session Date</label><input id="date" type="text" placeholder="e.g. June 14, 2027"></div>
-        <div><label for="venue">Venue (if known)</label><input id="venue" type="text" placeholder="Millbrook Vineyard"></div>
-        <div><label for="msg">A little about your day</label><textarea id="msg" rows="4" placeholder="Guest count, vibe, anything you'd like me to know"></textarea></div>
-        <button class="btn" type="submit">Send Inquiry</button>
-      </form>
-    </div>
-  </section>
 </main>
 
 <footer>
   <div class="wrap">
     <span class="mark serif">Wren &amp; Field</span>
     <div class="social">
-      <a href="#top">Instagram</a>
-      <a href="#top">Pinterest</a>
-      <a href="#top">The Journal</a>
+      <a href="journal.html">The Journal</a>
+      <a href="index.html">Instagram</a>
+      <a href="index.html">Pinterest</a>
     </div>
   </div>
 </footer>

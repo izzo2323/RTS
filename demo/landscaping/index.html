@@ -130,28 +130,9 @@
   .service-card h3 { font-size: 1.12rem; }
   .service-card p { color: var(--ink-soft); font-size: 0.94rem; }
 
-  /* Process */
-  .process { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-  @media (max-width: 860px) { .process { grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 560px) { .process { grid-template-columns: 1fr; } }
-  .step { display: flex; flex-direction: column; gap: 10px; }
-  .step .num { font-family: Georgia, serif; font-size: 1.8rem; color: var(--green); font-weight: 700; }
-  .step h4 { font-size: 1rem; }
-  .step p { font-size: 0.88rem; color: var(--ink-soft); }
-
-  /* Gallery */
-  .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-  @media (max-width: 760px) { .gallery-grid { grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 520px) { .gallery-grid { grid-template-columns: 1fr; } }
-  .g-card { border: 1px solid var(--line); background: var(--surface); overflow: hidden; }
-  .g-art { aspect-ratio: 4/3; width: 100%; object-fit: cover; display: block; }
-  .g-cap { padding: 14px 16px; }
-  .g-cap .t { font-weight: 600; font-size: 0.94rem; }
-  .g-cap .l { font-size: 0.8rem; color: var(--ink-faint); margin-top: 2px; }
-
   /* Testimonials */
-  .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-  @media (max-width: 860px) { .testi-grid { grid-template-columns: 1fr; } }
+  .testi-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 760px; margin: 0 auto; }
+  @media (max-width: 700px) { .testi-grid { grid-template-columns: 1fr; } }
   .testi { background: var(--surface); border: 1px solid var(--line); padding: 26px; display: flex; flex-direction: column; gap: 14px; }
   .testi .stars { color: var(--clay); letter-spacing: 2px; }
   .testi p.quote { color: var(--ink-soft); font-size: 0.95rem; }
@@ -214,7 +195,6 @@
     </a>
     <nav class="links">
       <a class="hide-sm" href="#services">Services</a>
-      <a class="hide-sm" href="#work">Our Work</a>
       <a class="hide-sm" href="#reviews">Reviews</a>
       <a class="btn" href="#quote">Get a Free Quote</a>
     </nav>
@@ -282,40 +262,6 @@
     </div>
   </section>
 
-  <section class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">HOW IT WORKS</p>
-      <h2 class="display">From first call to finished yard.</h2>
-    </div>
-    <div class="process">
-      <div class="step"><span class="num">01</span><h4>Free On-Site Estimate</h4><p>We walk the property with you and scope the work &mdash; no obligation, no pressure.</p></div>
-      <div class="step"><span class="num">02</span><h4>Fixed-Price Proposal</h4><p>You get a clear, itemized quote before anything is scheduled.</p></div>
-      <div class="step"><span class="num">03</span><h4>Scheduled Install</h4><p>Our crew handles the work on the agreed timeline, with daily cleanup.</p></div>
-      <div class="step"><span class="num">04</span><h4>Ongoing Care</h4><p>Optional maintenance plans keep everything looking the way it did on day one.</p></div>
-    </div>
-  </section>
-
-  <section id="work" class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">RECENT PROJECTS</p>
-      <h2 class="display">A few properties we've worked on.</h2>
-    </div>
-    <div class="gallery-grid">
-      <div class="g-card">
-        <img class="g-art" src="images/gallery-patio.jpg" alt="Paver patio with fire pit and seating" loading="lazy">
-        <div class="g-cap"><div class="t">Paver Patio &amp; Fire Pit</div><div class="l">Maple Ridge, Cedar Falls</div></div>
-      </div>
-      <div class="g-card">
-        <img class="g-art" src="images/gallery-frontyard.jpg" alt="Front yard garden redesign with manicured shrubs" loading="lazy">
-        <div class="g-cap"><div class="t">Front Yard Redesign</div><div class="l">Elm Street, Cedar Falls</div></div>
-      </div>
-      <div class="g-card">
-        <img class="g-art" src="images/gallery-wall.jpg" alt="Stone retaining wall and wood terrace deck" loading="lazy">
-        <div class="g-cap"><div class="t">Retaining Wall &amp; Terrace</div><div class="l">Hollow Creek Estates</div></div>
-      </div>
-    </div>
-  </section>
-
   <section id="reviews" class="wrap">
     <div class="section-head center" style="margin-left:auto; margin-right:auto; text-align:center;">
       <p class="eyebrow">WHAT CLIENTS SAY</p>
@@ -333,12 +279,6 @@
         <p class="quote">"We've used their weekly maintenance plan for three years. Reliable, communicative, and our lawn has never looked better."</p>
         <div class="who">Tom D.</div>
         <div class="where">Hollow Creek Estates</div>
-      </div>
-      <div class="testi">
-        <div class="stars">★★★★★</div>
-        <p class="quote">"Got quotes from four companies. Greenline was the most straightforward about cost and timeline, and they delivered exactly that."</p>
-        <div class="who">Priya S.</div>
-        <div class="where">Elm Street</div>
       </div>
     </div>
   </section>
