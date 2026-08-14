@@ -17,16 +17,36 @@
 
 <header class="site">
   <div class="wrap nav">
-    <a class="brand" href="#top">
+    <a class="brand" href="index.html">
       <img class="brand-mark" src="logo-icon.png" alt="" width="56" height="56">
       <span class="mark">RIZZO TECHNOLOGY SOLUTIONS<small>IT CONSULTING &amp; WEB DEVELOPMENT</small></span>
     </a>
     <nav class="links">
-      <a class="hide-sm" href="#services">Services</a>
-      <a class="hide-sm" href="#about">About</a>
-      <a class="hide-sm" href="#pricing">Pricing</a>
+      <div class="dropdown hide-sm">
+        <a class="dropdown-toggle" href="services.html">Services <span class="caret" aria-hidden="true">&#9662;</span></a>
+        <div class="dropdown-menu">
+          <a href="services.html#it-consulting">IT Consulting &amp; Support</a>
+          <a href="services.html#web-development">Web Development</a>
+          <a href="services.html#maintenance">Ongoing Maintenance</a>
+        </div>
+      </div>
+      <a class="hide-sm" href="pricing.html">Pricing</a>
+      <a class="hide-sm" href="about.html">About</a>
       <button type="button" class="btn" data-open-consult>Book a consult</button>
+      <button type="button" class="mobile-toggle" id="mobile-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
     </nav>
+  </div>
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <a class="active" href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a class="sub" href="services.html#it-consulting">IT Consulting &amp; Support</a>
+    <a class="sub" href="services.html#web-development">Web Development</a>
+    <a class="sub" href="services.html#maintenance">Ongoing Maintenance</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="about.html">About</a>
+    <button type="button" class="btn" data-open-consult>Book a consult</button>
   </div>
 </header>
 
@@ -38,7 +58,7 @@
       <p class="lede">Rizzo Technology Solutions helps small businesses fix what's broken, build what's missing, and keep both running &mdash; without the jargon, the upsell, or the six-week wait for a callback.</p>
       <div class="ctas">
         <button type="button" class="btn" data-open-consult>Book a free consult</button>
-        <a class="btn ghost" href="#services">See what I do</a>
+        <a class="btn ghost" href="services.html">See what I do</a>
       </div>
     </div>
     <div class="schematic" aria-hidden="true">
@@ -93,6 +113,7 @@
         <p>Monthly checkups, security patches, backups you can verify, and a direct line when something breaks &mdash; so "the website's down" doesn't become an all-day problem.</p>
       </article>
     </div>
+    <p style="margin-top: 32px;"><a class="btn ghost" href="services.html">View the full breakdown &rarr;</a></p>
   </section>
 
   <section id="about" class="wrap">
@@ -103,9 +124,9 @@
     <div class="about">
       <div class="about-copy">
         <p>I started Rizzo Technology Solutions because most small businesses end up choosing between two bad options: an overpriced agency that treats them like a line item, or a freelancer who disappears once the invoice clears. I wanted to build something else &mdash; <strong>a single person you can actually call</strong>, who understands both the code behind your website and the network humming in your back office.</p>
-        <p>Every engagement starts the same way: I ask what's actually slowing you down, not what package I'd like to sell you. Sometimes that's a five-page website. Sometimes it's a two-hour phone call that saves you from a $10,000 mistake.</p>
         <p>If it plugs in, connects to the internet, or has a URL, I can probably help.</p>
       </div>
+      <p style="margin-top: 24px;"><a class="btn ghost" href="about.html">More about how I work &rarr;</a></p>
     </div>
   </section>
 
@@ -113,87 +134,26 @@
     <div class="section-head">
       <p class="eyebrow">PRICING</p>
       <h2 class="slab">What things cost, up front.</h2>
-      <p>No hourly surprises on fixed-scope work, no vague "contact for quote" on everything. Here's the real structure &mdash; final numbers depend on scope, and every project is confirmed before work starts.</p>
+      <p>No hourly surprises on fixed-scope work, no vague "contact for quote" on everything. Real starting numbers below &mdash; final scope is always confirmed before work starts.</p>
     </div>
-
-    <div class="price-block">
-      <span class="mono label">Web Development &mdash; project-based</span>
-      <div class="table-scroll">
-        <table class="price-table">
-          <thead>
-            <tr>
-              <th scope="col"></th>
-              <th scope="col">Starter Site</th>
-              <th scope="col">Business Site</th>
-              <th scope="col">Custom / E-Commerce</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="row-label">Price</td>
-              <td class="amount">$1,200</td>
-              <td class="amount">From $2,800</td>
-              <td class="amount">Custom quote</td>
-            </tr>
-            <tr>
-              <td class="row-label">Best for</td>
-              <td>A clean, professional presence</td>
-              <td>Businesses that update content often</td>
-              <td>Online stores, booking systems, web apps</td>
-            </tr>
-            <tr>
-              <td class="row-label">Includes</td>
-              <td>Up to 5 pages &middot; mobile-responsive &middot; contact form &middot; basic SEO</td>
-              <td>Up to 12 pages &middot; self-editable CMS &middot; advanced SEO &amp; analytics &middot; one integration</td>
-              <td>Everything in Business &middot; payments or booking integration &middot; custom features</td>
-            </tr>
-            <tr>
-              <td class="row-label">Timeline</td>
-              <td>2&ndash;3 weeks</td>
-              <td>4&ndash;6 weeks</td>
-              <td>Scoped per project</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <div class="services-grid">
+      <article class="service-card">
+        <span class="tag mono">STARTER SITE</span>
+        <h3 class="slab">$1,200</h3>
+        <p>A clean, professional presence. Up to 5 pages, mobile-responsive, contact form, basic SEO.</p>
+      </article>
+      <article class="service-card">
+        <span class="tag mono">BUSINESS SITE</span>
+        <h3 class="slab">From $2,800</h3>
+        <p>For businesses that update content often. Self-editable CMS, advanced SEO &amp; analytics, one integration.</p>
+      </article>
+      <article class="service-card">
+        <span class="tag mono">SUPPORT PLANS</span>
+        <h3 class="slab">From $95/hr</h3>
+        <p>Pay-as-you-go troubleshooting, or a monthly plan starting at $150/mo for ongoing peace of mind.</p>
+      </article>
     </div>
-
-    <div class="price-block">
-      <span class="mono label">IT Consulting &amp; Support &mdash; ongoing</span>
-      <div class="table-scroll">
-        <table class="price-table">
-          <thead>
-            <tr>
-              <th scope="col"></th>
-              <th scope="col">Pay-as-you-go</th>
-              <th scope="col">Essential Care</th>
-              <th scope="col">Priority Partner</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="row-label">Price</td>
-              <td class="amount">$95/hr</td>
-              <td class="amount">$150/mo</td>
-              <td class="amount">$400/mo</td>
-            </tr>
-            <tr>
-              <td class="row-label">Best for</td>
-              <td>One-off fixes and small projects</td>
-              <td>Businesses that want peace of mind</td>
-              <td>Businesses that can't afford downtime</td>
-            </tr>
-            <tr>
-              <td class="row-label">Includes</td>
-              <td>Troubleshooting &middot; setup &middot; security checkups &middot; procurement advice</td>
-              <td>Monthly system checkup &middot; update management &middot; backup verification &middot; email support</td>
-              <td>Everything in Essential &middot; 4 hrs support included &middot; same-day priority response &middot; quarterly tech review</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <p class="price-note">Every plan starts with a free 20-minute consult &mdash; no obligation, no pressure.</p>
+    <p style="margin-top: 32px;"><a class="btn ghost" href="pricing.html">See full pricing &amp; FAQ &rarr;</a></p>
   </section>
 
   <section id="contact" class="wrap">
@@ -247,9 +207,17 @@
 </div>
 
 <footer>
-  <div class="wrap">
+  <div class="wrap footer-top">
+    <nav class="footer-nav mono">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+  <div class="wrap footer-bottom">
     <span class="mono">&copy; 2026 RIZZO TECHNOLOGY SOLUTIONS</span>
-    <span class="mono">SITE V.1</span>
+    <span class="mono">SITE V.2</span>
   </div>
 </footer>
 

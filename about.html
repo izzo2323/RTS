@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About — Rizzo Technology Solutions</title>
+<meta name="description" content="Nick Rizzo founded Rizzo Technology Solutions to give small businesses one point of contact for both IT support and web development.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="favicon-16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+<body>
+
+<a class="skip-link" href="#top">Skip to content</a>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <img class="brand-mark" src="logo-icon.png" alt="" width="56" height="56">
+      <span class="mark">RIZZO TECHNOLOGY SOLUTIONS<small>IT CONSULTING &amp; WEB DEVELOPMENT</small></span>
+    </a>
+    <nav class="links">
+      <div class="dropdown hide-sm">
+        <a class="dropdown-toggle" href="services.html">Services <span class="caret" aria-hidden="true">&#9662;</span></a>
+        <div class="dropdown-menu">
+          <a href="services.html#it-consulting">IT Consulting &amp; Support</a>
+          <a href="services.html#web-development">Web Development</a>
+          <a href="services.html#maintenance">Ongoing Maintenance</a>
+        </div>
+      </div>
+      <a class="hide-sm" href="pricing.html">Pricing</a>
+      <a class="hide-sm active" href="about.html">About</a>
+      <button type="button" class="btn" data-open-consult>Book a consult</button>
+      <button type="button" class="mobile-toggle" id="mobile-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a class="sub" href="services.html#it-consulting">IT Consulting &amp; Support</a>
+    <a class="sub" href="services.html#web-development">Web Development</a>
+    <a class="sub" href="services.html#maintenance">Ongoing Maintenance</a>
+    <a href="pricing.html">Pricing</a>
+    <a class="active" href="about.html">About</a>
+    <button type="button" class="btn" data-open-consult>Book a consult</button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="page-hero wrap">
+    <p class="eyebrow">ABOUT</p>
+    <h1 class="slab">Hi, I'm Nick Rizzo.</h1>
+    <p class="lede">I started Rizzo Technology Solutions because most small businesses end up choosing between two bad options: an overpriced agency that treats them like a line item, or a freelancer who disappears once the invoice clears.</p>
+  </section>
+
+  <section class="wrap" style="padding-top: 20px;">
+    <div class="about">
+      <div class="about-copy">
+        <p>I wanted to build something else &mdash; <strong>a single person you can actually call</strong>, who understands both the code behind your website and the network humming in your back office. Most businesses end up with a web developer who doesn't touch hardware and an IT contractor who won't touch code. I do both, so nothing falls into the gap between two vendors pointing fingers at each other.</p>
+        <p>Every engagement starts the same way: I ask what's actually slowing you down, not what package I'd like to sell you. Sometimes that's a five-page website. Sometimes it's a two-hour phone call that saves you from a $10,000 mistake.</p>
+        <p>If it plugs in, connects to the internet, or has a URL, I can probably help.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">HOW I WORK</p>
+      <h2 class="slab">Four steps, no surprises in between.</h2>
+      <p>The same process whether it's a website, a network fix, or both.</p>
+    </div>
+    <div class="process">
+      <div class="process-step">
+        <span class="mono num">01</span>
+        <h3 class="slab">Discover</h3>
+        <p>A free 20-minute call about what's actually slowing you down.</p>
+      </div>
+      <div class="process-step">
+        <span class="mono num">02</span>
+        <h3 class="slab">Scope</h3>
+        <p>A fixed-cost plan in writing before anything starts &mdash; no hourly surprises.</p>
+      </div>
+      <div class="process-step">
+        <span class="mono num">03</span>
+        <h3 class="slab">Build</h3>
+        <p>You see and comment on progress along the way, not just a reveal at the end.</p>
+      </div>
+      <div class="process-step">
+        <span class="mono num">04</span>
+        <h3 class="slab">Support</h3>
+        <p>Checkups, patches, and a direct line after launch &mdash; if you want it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="contact">
+      <p class="eyebrow">GET IN TOUCH</p>
+      <h2 class="slab">Let's start with a conversation.</h2>
+      <p>No pressure, no obligation &mdash; just a straight answer about what your project would actually take.</p>
+      <button type="button" class="btn" data-open-consult>Book a consult</button>
+    </div>
+  </section>
+</main>
+
+<div class="modal-overlay" id="consult-modal" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="consult-modal-title">
+    <button type="button" class="modal-close" data-close-consult aria-label="Close">&times;</button>
+    <h2 class="slab" id="consult-modal-title">Book a free consult</h2>
+    <p class="modal-lede">Tell me a bit about your project and I'll reply within one business day.</p>
+    <form id="consult-form">
+      <div class="field">
+        <label for="cf-name">Name</label>
+        <input type="text" id="cf-name" name="name" required autocomplete="name">
+      </div>
+      <div class="field">
+        <label for="cf-company">Company name</label>
+        <input type="text" id="cf-company" name="company" required autocomplete="organization">
+      </div>
+      <div class="field">
+        <label for="cf-email">Email</label>
+        <input type="email" id="cf-email" name="email" required autocomplete="email">
+      </div>
+      <div class="field">
+        <label for="cf-phone">Phone <span class="optional">(optional)</span></label>
+        <input type="tel" id="cf-phone" name="phone" autocomplete="tel">
+      </div>
+      <div class="field">
+        <label for="cf-message">What are you looking for?</label>
+        <textarea id="cf-message" name="message" required></textarea>
+      </div>
+      <input type="hidden" name="access_key" value="f95a78b3-18c8-40da-8d31-dd8de1a51a6a">
+      <input type="hidden" name="subject" value="New consult request — rizzotechsolutions.com">
+      <input type="hidden" name="from_name" value="RTS website consult form">
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+      <button type="submit" class="btn">Send request</button>
+      <p class="form-status" id="consult-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap footer-top">
+    <nav class="footer-nav mono">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+  <div class="wrap footer-bottom">
+    <span class="mono">&copy; 2026 RIZZO TECHNOLOGY SOLUTIONS</span>
+    <span class="mono">SITE V.2</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
