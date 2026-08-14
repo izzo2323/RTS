@@ -48,7 +48,7 @@
       .then(function (res) { return res.json(); })
       .then(function (data) {
         if (data.success) {
-          status.textContent = "Thanks — I'll be in touch within one business day.";
+          status.textContent = 'Your request has been sent. We will reach out soon.';
           status.className = 'form-status success';
           form.reset();
           setTimeout(closeModal, 2200);
