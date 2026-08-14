@@ -302,20 +302,6 @@ section + section { border-top: 1px solid var(--line); }
 }
 
 /* ---------- About ---------- */
-.about {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 48px;
-  align-items: start;
-}
-.about-photo {
-  width: 128px;
-  height: 128px;
-  border: 1px solid var(--line);
-  display: block;
-  object-fit: cover;
-  background: var(--surface);
-}
 .about-copy p {
   max-width: 62ch;
   color: var(--ink-soft);
@@ -323,10 +309,6 @@ section + section { border-top: 1px solid var(--line); }
 }
 .about-copy p:last-child { margin-bottom: 0; }
 .about-copy strong { color: var(--ink); font-weight: 600; }
-
-@media (max-width: 640px) {
-  .about { grid-template-columns: 1fr; }
-}
 
 /* ---------- Pricing ---------- */
 .price-block { margin-bottom: 64px; }
