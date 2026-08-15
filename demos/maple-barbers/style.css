@@ -45,12 +45,6 @@ header.site .nav {
   padding: 16px 28px;
 }
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #F7F1E6; }
-.brand .pole {
-  width: 30px; height: 30px; border-radius: 50%;
-  background: repeating-linear-gradient(45deg, #fff 0 8px, var(--red) 8px 16px, var(--navy) 16px 24px);
-  border: 2px solid #F7F1E6;
-  flex-shrink: 0;
-}
 .brand .mark { font-size: 1.28rem; font-weight: 700; }
 .brand .sub { display: block; font-size: 0.62rem; letter-spacing: 0.14em; color: #C9A66B; text-transform: uppercase; margin-top: 2px; }
 nav.links { display: flex; align-items: center; gap: 26px; }
