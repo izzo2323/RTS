@@ -32,9 +32,7 @@ p { margin: 0; text-wrap: pretty; }
 
 header.site { position: sticky; top: 0; z-index: 30; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
 .nav { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; gap: 20px; }
-.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
-.logo-mark { height: 42px; width: 42px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 1px solid var(--line); }
-.brand-text { display: flex; flex-direction: column; }
+.brand { display: flex; flex-direction: column; text-decoration: none; color: var(--ink); }
 .brand .mark { font-size: 1.45rem; }
 .brand .sub { font-size: 0.6rem; letter-spacing: 0.18em; color: var(--ink-soft); margin-top: 3px; font-weight: 700; }
 nav.links { display: flex; align-items: center; gap: 28px; }
@@ -64,7 +62,11 @@ nav.links a:hover, nav.links a.active { color: var(--ink); }
 .hero .meta .k { font-size: 0.64rem; letter-spacing: 0.12em; color: var(--ink-faint); text-transform: uppercase; font-weight: 700; }
 .hero .meta .v { font-size: 0.95rem; color: var(--ink); }
 
-.melt-art { position: absolute; right: -30px; top: 44%; transform: translateY(-50%); width: 380px; height: 380px; opacity: 0.95; }
+.melt-art {
+  position: absolute; right: 30px; top: 44%; transform: translateY(-50%);
+  width: 320px; height: 320px; border-radius: 50%; object-fit: cover;
+  border: 3px solid #1a1a1a; box-shadow: 0 24px 60px -20px rgba(0,0,0,0.25);
+}
 @media (max-width: 980px) { .melt-art { display: none; } }
 
 .page-hero { position: relative; padding: 68px 0 52px; overflow: hidden; }
