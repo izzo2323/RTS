@@ -4,10 +4,10 @@
   --ink: #2A241C;
   --ink-soft: #5C5040;
   --ink-faint: #94876E;
-  --teal-deep: #0F3B3A;
-  --teal: #1C5C58;
-  --mahogany: #7A3B2E;
-  --mahogany-deep: #5A2A20;
+  --teal-deep: #3C4C5C;
+  --teal: #5C7A93;
+  --mahogany: #7A2020;
+  --mahogany-deep: #5A1616;
   --line: #E0D6C0;
 }
 * { box-sizing: border-box; }

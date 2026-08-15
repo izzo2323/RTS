@@ -1,14 +1,14 @@
 :root {
-  --bg: #FAF7FB;
+  --bg: #F6F7FA;
   --surface: #FFFFFF;
-  --surface-2: #F0E6F5;
-  --ink: #241A2E;
-  --ink-soft: #55425F;
-  --ink-faint: #8B7791;
-  --purple: #5B2A72;
-  --purple-deep: #3C1B4D;
+  --surface-2: #E7EAF2;
+  --ink: #171B2E;
+  --ink-soft: #454A63;
+  --ink-faint: #7B8098;
+  --purple: #1B2A52;
+  --purple-deep: #0F1A38;
   --gold: #C9A227;
-  --line: #E4D6EA;
+  --line: #DDE1EC;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }

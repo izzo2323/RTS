@@ -5,10 +5,10 @@
   --ink: #2B2118;
   --ink-soft: #5C4B3A;
   --ink-faint: #8C7A64;
-  --turquoise: #1EA7A0;
-  --turquoise-deep: #147A75;
-  --terracotta: #D9713C;
-  --lime: #A8C24B;
+  --turquoise: #F5B315;
+  --turquoise-deep: #C77E00;
+  --terracotta: #D62E1F;
+  --lime: #F2C744;
   --line: #EFDFC8;
 }
 * { box-sizing: border-box; }
@@ -117,6 +117,9 @@ section + section { border-top: 1px solid var(--line); }
 .addr-block { display: flex; flex-direction: column; gap: 12px; }
 .addr-block .line { font-size: 1rem; }
 .addr-block .mono-ish { font-size: 0.85rem; color: var(--ink-soft); font-weight: 600; }
+
+.map-embed { margin-top: 8px; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; box-shadow: 0 0 0 4px var(--terracotta) inset; }
+.map-embed iframe { display: block; }
 
 .cta-block { text-align: center; padding-top: 94px; padding-bottom: 94px; }
 .cta-block h2 { font-size: clamp(1.9rem, 3.8vw, 2.8rem); max-width: 22ch; margin: 0 auto; }

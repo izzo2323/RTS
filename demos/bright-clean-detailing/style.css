@@ -1,15 +1,15 @@
 :root {
-  --bg: #F3FBFC;
+  --bg: #F7F5F0;
   --surface: #FFFFFF;
-  --surface-2: #E9F7F8;
-  --ink: #0C2B2E;
-  --ink-soft: #3E5C5F;
-  --ink-faint: #6E8B8D;
-  --cyan: #00B4C2;
-  --cyan-deep: #00838F;
-  --cyan-bright: #2FE0D8;
-  --charcoal: #14262A;
-  --line: #D3ECEE;
+  --surface-2: #EFE8DA;
+  --ink: #18140F;
+  --ink-soft: #4A4238;
+  --ink-faint: #837A6C;
+  --cyan: #E8803F;
+  --cyan-deep: #B85B1F;
+  --cyan-bright: #F4A45E;
+  --charcoal: #0D0C0A;
+  --line: #E3DACB;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -184,6 +184,9 @@ section + section { border-top: 1px solid var(--line); }
 .addr-block { display: flex; flex-direction: column; gap: 14px; }
 .addr-block .line { font-size: 1rem; }
 .addr-block .mono-ish { font-size: 0.88rem; color: var(--ink-soft); }
+
+.map-embed { margin-top: 40px; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; box-shadow: 0 0 0 4px var(--charcoal) inset; }
+.map-embed iframe { display: block; }
 
 .quote-box { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 34px; }
 .quote-box .row { display: flex; flex-direction: column; gap: 6px; margin-bottom: 18px; }

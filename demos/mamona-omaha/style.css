@@ -8,6 +8,7 @@
   --brick: #B23B2E;
   --brick-deep: #8A2A20;
   --marigold: #E0A63A;
+  --talavera: #2E6F8E;
   --line: #E7D8B8;
 }
 * { box-sizing: border-box; }
@@ -153,6 +154,9 @@ section + section { border-top: 1px solid var(--line); }
 .addr-block { display: flex; flex-direction: column; gap: 12px; }
 .addr-block .line { font-size: 1rem; }
 .addr-block .mono-ish { font-family: "Futura","Century Gothic",sans-serif; font-size: 0.85rem; color: var(--ink-soft); }
+
+.map-embed { margin-top: 46px; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; box-shadow: 0 0 0 6px var(--talavera) inset; }
+.map-embed iframe { display: block; }
 
 .cta-block { text-align: center; padding-top: 94px; padding-bottom: 94px; }
 .cta-block h2 { font-size: clamp(1.9rem, 3.8vw, 2.8rem); max-width: 20ch; margin: 0 auto; }
