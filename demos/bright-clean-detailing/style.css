@@ -77,6 +77,7 @@ header.site {
 nav.links { display: flex; align-items: center; gap: 28px; }
 nav.links a { color: var(--ink-soft); text-decoration: none; font-size: 0.92rem; font-weight: 600; }
 nav.links a:hover, nav.links a.active { color: var(--cyan-deep); }
+nav.links a.btn { color: #04191B; }
 .btn {
   display: inline-flex;
   align-items: center;

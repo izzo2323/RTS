@@ -8,6 +8,7 @@
   --purple: #1B2A52;
   --purple-deep: #0F1A38;
   --gold: #C9A227;
+  --gold-ink: #8A6E15;
   --line: #DDE1EC;
 }
 * { box-sizing: border-box; }
@@ -34,10 +35,11 @@ header.site { position: sticky; top: 0; z-index: 30; background: color-mix(in sr
 .nav { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; gap: 20px; }
 .brand { display: flex; flex-direction: column; text-decoration: none; color: var(--ink); }
 .brand .mark { font-size: 1.4rem; letter-spacing: 0.01em; }
-.brand .sub { font-family: "Futura","Century Gothic",sans-serif; font-size: 0.58rem; letter-spacing: 0.24em; color: var(--gold); margin-top: 3px; }
+.brand .sub { font-family: "Futura","Century Gothic",sans-serif; font-size: 0.58rem; letter-spacing: 0.24em; color: var(--gold-ink); margin-top: 3px; }
 nav.links { display: flex; align-items: center; gap: 30px; }
 nav.links a { color: var(--ink-soft); text-decoration: none; font-size: 0.92rem; }
 nav.links a:hover, nav.links a.active { color: var(--purple); }
+nav.links a.btn { color: #FAF7FB; }
 .btn {
   display: inline-flex; align-items: center; gap: 8px;
   background: var(--purple); color: #FAF7FB; text-decoration: none;
@@ -53,7 +55,7 @@ nav.links a:hover, nav.links a.active { color: var(--purple); }
 .hero { position: relative; padding: 108px 0 96px; overflow: hidden; }
 .hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse 700px 500px at 82% 16%, rgba(91,42,114,0.18), transparent 60%), radial-gradient(ellipse 500px 400px at 8% 84%, rgba(201,162,39,0.12), transparent 60%); pointer-events: none; }
 .hero-inner { position: relative; max-width: 630px; }
-.hero .label { color: var(--gold); }
+.hero .label { color: var(--gold-ink); }
 .hero h1 { font-size: clamp(2.5rem, 5.8vw, 4.1rem); line-height: 1.06; margin-top: 20px; }
 .hero h1 em { color: var(--purple); font-style: italic; }
 .hero .lede { margin-top: 24px; font-size: 1.1rem; color: var(--ink-soft); max-width: 48ch; }
@@ -69,14 +71,14 @@ nav.links a:hover, nav.links a.active { color: var(--purple); }
 .page-hero { position: relative; padding: 74px 0 58px; overflow: hidden; }
 .page-hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse 600px 400px at 88% 10%, rgba(91,42,114,0.16), transparent 60%); pointer-events: none; }
 .page-hero .inner { position: relative; max-width: 640px; }
-.page-hero .label { color: var(--gold); }
+.page-hero .label { color: var(--gold-ink); }
 .page-hero h1 { font-size: clamp(2rem, 4.2vw, 2.9rem); margin-top: 16px; }
 .page-hero p.lede { margin-top: 18px; font-size: 1.03rem; color: var(--ink-soft); max-width: 52ch; }
 
 section { padding: 88px 0; }
 section + section { border-top: 1px solid var(--line); }
 .section-head { max-width: 620px; margin-bottom: 48px; }
-.section-head .label { color: var(--gold); }
+.section-head .label { color: var(--gold-ink); }
 .section-head h2 { font-size: clamp(1.75rem, 3.3vw, 2.4rem); margin-top: 14px; }
 .section-head p { margin-top: 16px; color: var(--ink-soft); max-width: 58ch; }
 
@@ -86,7 +88,7 @@ section + section { border-top: 1px solid var(--line); }
 .highlight-card .label { color: var(--purple); display: block; margin-bottom: 13px; }
 .highlight-card h3 { font-size: 1.18rem; margin-bottom: 10px; }
 .highlight-card p { color: var(--ink-soft); font-size: 0.94rem; }
-.highlight-card a.more { display: inline-block; margin-top: 15px; font-size: 0.85rem; text-decoration: none; color: var(--gold); }
+.highlight-card a.more { display: inline-block; margin-top: 15px; font-size: 0.85rem; text-decoration: none; color: var(--gold-ink); font-weight: 700; }
 .highlight-card a.more:hover { color: var(--purple); }
 
 .menu-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 54px; }
@@ -96,7 +98,7 @@ section + section { border-top: 1px solid var(--line); }
 .menu-item:last-child { border-bottom: none; }
 .menu-item .name { font-size: 1.03rem; }
 .menu-item .desc { color: var(--ink-faint); font-size: 0.87rem; margin-top: 5px; max-width: 34ch; }
-.menu-item .price { font-family: "Futura","Century Gothic",sans-serif; color: var(--gold); font-size: 0.93rem; white-space: nowrap; }
+.menu-item .price { font-family: "Futura","Century Gothic",sans-serif; color: var(--gold-ink); font-size: 0.93rem; white-space: nowrap; }
 .menu-note { margin-top: 38px; color: var(--ink-faint); font-size: 0.87rem; font-style: italic; }
 
 .story { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 58px; align-items: center; }

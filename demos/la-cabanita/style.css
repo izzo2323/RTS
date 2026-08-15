@@ -6,7 +6,7 @@
   --ink-soft: #5C4B3A;
   --ink-faint: #8C7A64;
   --turquoise: #F5B315;
-  --turquoise-deep: #C77E00;
+  --turquoise-deep: #8A5600;
   --terracotta: #D62E1F;
   --lime: #F2C744;
   --line: #EFDFC8;
@@ -39,6 +39,7 @@ header.site { position: sticky; top: 0; z-index: 30; background: color-mix(in sr
 nav.links { display: flex; align-items: center; gap: 28px; }
 nav.links a { color: var(--ink-soft); text-decoration: none; font-size: 0.92rem; }
 nav.links a:hover, nav.links a.active { color: var(--turquoise-deep); }
+nav.links a.btn { color: #FFF9F2; }
 .btn {
   display: inline-flex; align-items: center; gap: 8px;
   background: var(--terracotta); color: #FFF9F2; text-decoration: none;
@@ -102,7 +103,7 @@ section + section { border-top: 1px solid var(--line); }
 .event-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; margin-top: 20px; }
 @media (max-width: 760px) { .event-grid { grid-template-columns: 1fr; } }
 .event-grid .tile { aspect-ratio: 4/3; border-radius: 4px; position: relative; overflow: hidden; display: flex; align-items: flex-end; padding: 14px; }
-.event-grid .tile span { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; font-weight: 700; text-shadow: 0 1px 4px rgba(0,0,0,0.4); }
+.event-grid .tile span { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; font-weight: 700; background: rgba(20,14,8,0.68); padding: 5px 9px; border-radius: 3px; }
 .event-grid .tile.t1 { background: linear-gradient(150deg, var(--terracotta), var(--turquoise)); }
 .event-grid .tile.t2 { background: linear-gradient(150deg, var(--turquoise), var(--lime)); }
 .event-grid .tile.t3 { background: linear-gradient(150deg, var(--lime), var(--terracotta)); }

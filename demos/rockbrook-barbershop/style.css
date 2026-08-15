@@ -46,7 +46,7 @@ nav.links { display: flex; align-items: center; gap: 30px; font-family: "Helveti
 nav.links a { color: #DCD2B8; text-decoration: none; font-size: 0.92rem; font-weight: 500; letter-spacing: 0.02em; }
 nav.links a.active, nav.links a:hover { color: var(--brass-bright); }
 nav.links a.btn {
-  background: var(--brass); color: var(--charcoal-deep); padding: 10px 20px; border-radius: 2px; font-weight: 700;
+  background: var(--brass); color: #F2ECDD; padding: 10px 20px; border-radius: 2px; font-weight: 700;
 }
 nav.links a.btn:hover { background: var(--brass-bright); }
 @media (max-width: 680px) { nav.links a.hide-sm { display: none; } }

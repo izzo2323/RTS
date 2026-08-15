@@ -77,6 +77,7 @@ section.wrap { padding: 60px 28px; }
 .strip .wrap { padding: 54px 28px; text-align: center; }
 .strip h2 { color: #1A1207; font-size: clamp(1.5rem, 3vw, 2.1rem); }
 .strip p { margin-top: 14px; color: #4A3410; max-width: 60ch; margin-left: auto; margin-right: auto; }
+.strip a { color: #1A1207; text-decoration: underline; font-weight: 700; }
 .strip .btn { margin-top: 26px; background: #1A1207; color: #F5F6F7; }
 .strip .btn:hover { background: #2A1D0F; }
 

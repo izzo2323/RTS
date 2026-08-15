@@ -6,7 +6,7 @@
   --ink-soft: #4A453B;
   --ink-faint: #857E6E;
   --cheese: #F2B705;
-  --cheese-deep: #B8890A;
+  --cheese-deep: #7A5A07;
   --tomato: #C2401F;
   --line: #E2DDCC;
 }
@@ -38,6 +38,7 @@ header.site { position: sticky; top: 0; z-index: 30; background: color-mix(in sr
 nav.links { display: flex; align-items: center; gap: 28px; }
 nav.links a { color: var(--ink-soft); text-decoration: none; font-size: 0.92rem; font-weight: 600; }
 nav.links a:hover, nav.links a.active { color: var(--ink); }
+nav.links a.btn { color: var(--bg); }
 .btn {
   display: inline-flex; align-items: center; gap: 8px;
   background: var(--ink); color: var(--bg); text-decoration: none;

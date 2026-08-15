@@ -98,6 +98,7 @@ section.wrap { padding: 56px 28px; }
 .card p { margin-top: 10px; color: var(--ink-soft); font-size: 0.96rem; }
 
 .strip { background: var(--navy-deep); color: #F1EADA; }
+.strip a { color: #F1EADA; text-decoration: underline; }
 .strip .wrap { padding: 52px 28px; text-align: center; }
 .strip h2 { color: #fff; font-size: clamp(1.5rem, 3vw, 2rem); }
 .strip p { margin-top: 14px; color: #C9BFA8; max-width: 60ch; margin-left: auto; margin-right: auto; }
