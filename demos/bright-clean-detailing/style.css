@@ -65,7 +65,9 @@ header.site {
   padding-bottom: 18px;
   gap: 20px;
 }
-.brand { display: flex; flex-direction: column; text-decoration: none; color: var(--ink); }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
+.logo-mark { height: 42px; width: 42px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 1px solid var(--line); }
+.brand-text { display: flex; flex-direction: column; }
 .brand .mark { font-size: 1.3rem; }
 .brand .sub {
   font-size: 0.6rem;

@@ -45,9 +45,9 @@ header.site .nav {
   padding: 16px 28px;
 }
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #F7F1E6; }
-.brand .pole {
-  width: 30px; height: 30px; border-radius: 50%;
-  background: repeating-linear-gradient(45deg, #fff 0 8px, var(--red) 8px 16px, var(--navy) 16px 24px);
+.brand .logo-img {
+  width: 40px; height: 40px; border-radius: 50%;
+  object-fit: cover;
   border: 2px solid #F7F1E6;
   flex-shrink: 0;
 }

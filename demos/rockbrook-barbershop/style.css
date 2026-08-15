@@ -37,7 +37,7 @@ header.site .nav { display: flex; align-items: center; justify-content: space-be
 .brand { display: flex; align-items: center; gap: 14px; text-decoration: none; color: #F2ECDD; }
 .crest {
   width: 34px; height: 34px; border: 1.5px solid var(--brass-bright); border-radius: 50%;
-  display: flex; align-items: center; justify-content: center; font-size: 0.8rem; color: var(--brass-bright);
+  object-fit: cover;
   flex-shrink: 0;
 }
 .brand .mark { font-size: 1.32rem; letter-spacing: 0.01em; }
