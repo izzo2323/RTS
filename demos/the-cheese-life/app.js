@@ -18,11 +18,10 @@
 
 (function () {
   var overlay = document.getElementById('demoAlert');
-  if (!overlay || overlay.hidden) return;
+  if (!overlay) return;
   var closeBtn = document.getElementById('demoAlertClose');
   function dismiss() {
     overlay.hidden = true;
-    sessionStorage.setItem('rts-demo-alert-dismissed:' + location.pathname.replace(/[^/]*$/, ''), '1');
   }
   closeBtn.addEventListener('click', dismiss);
   overlay.addEventListener('click', function (e) {
