@@ -125,3 +125,20 @@ footer a { color: #E4DCC6; }
   font-size: 0.7rem; letter-spacing: 0.06em; padding: 8px 12px; border-radius: 3px;
 }
 .demo-tag a { color: #C9975A; font-weight: 700; }
+
+/* demo disclaimer modal */
+.demo-alert-overlay {
+  position: fixed; inset: 0; z-index: 200;
+  background: rgba(10, 10, 12, 0.65);
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px;
+}
+.demo-alert-overlay[hidden] { display: none; }
+.demo-alert-box {
+  background: var(--surface); color: var(--ink); border: 1px solid var(--line);
+  max-width: 440px; width: 100%; padding: 28px 26px; border-radius: 10px;
+  box-shadow: 0 24px 60px -20px rgba(0,0,0,0.5);
+}
+.demo-alert-box h2 { font-size: 1.15rem; margin: 0 0 12px; }
+.demo-alert-box p { color: var(--ink-soft); font-size: 0.92rem; line-height: 1.55; margin: 0 0 20px; }
+.demo-alert-box .demo-alert-close { border: none; cursor: pointer; font-family: inherit; }
