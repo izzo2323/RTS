@@ -24,9 +24,6 @@
     overlay.hidden = true;
   }
   closeBtn.addEventListener('click', dismiss);
-  overlay.addEventListener('click', function (e) {
-    if (e.target === overlay) dismiss();
-  });
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && !overlay.hidden) dismiss();
   });
