@@ -18,12 +18,15 @@
       <span class="mark display">La Cabañita</span>
       <span class="sub">TACO TRUCK &middot; OMAHA</span>
     </a>
+    <div class="nav-right">
     <nav class="links">
       <a class="hide-sm active" href="index.html">Home</a>
       <a class="hide-sm" href="menu.html">Menu</a>
       <a class="hide-sm" href="catering.html">Catering</a>
       <a class="btn" href="catering.html">Get a Quote</a>
     </nav>
+    <button type="button" class="menu-toggle" aria-expanded="false" aria-label="Toggle menu">&#9776;</button>
+    </div>
   </div>
 </header>
 
@@ -101,5 +104,23 @@
 
 <div class="demo-tag">PORTFOLIO DEMO &middot; built by <a href="/">Rizzo Technology Solutions</a></div>
 
+<script>
+(function () {
+  var header = document.querySelector('header.site');
+  var toggle = header.querySelector('.menu-toggle');
+  toggle.addEventListener('click', function () {
+    var open = header.classList.toggle('nav-open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.textContent = open ? '\u2715' : '\u2630';
+  });
+  document.addEventListener('click', function (e) {
+    if (header.classList.contains('nav-open') && !header.contains(e.target)) {
+      header.classList.remove('nav-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.textContent = '\u2630';
+    }
+  });
+})();
+</script>
 </body>
 </html>
