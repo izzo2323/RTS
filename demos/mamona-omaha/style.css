@@ -79,6 +79,9 @@ nav.links a.btn { color: #FBF1DE; }
   color: var(--ink); align-items: center; justify-content: center; flex-shrink: 0; padding: 0;
 }
 @media (max-width: 760px) {
+  header.site .nav { padding: 14px 16px; }
+  .brand .sub { display: none; }
+  nav.links a.btn { font-size: 0.82rem; padding: 9px 14px; white-space: nowrap; }
   nav.links a.hide-sm { display: none; }
   .menu-toggle { display: inline-flex; }
   header.site.nav-open nav.links {
