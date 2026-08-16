@@ -58,7 +58,7 @@ nav.links a.btn:hover { background: var(--red-deep); }
 .menu-toggle {
   display: none; background: transparent; border: 1px solid var(--line); border-radius: 4px;
   width: 38px; height: 34px; font-size: 1.05rem; line-height: 1; cursor: pointer;
-  color: var(--ink); align-items: center; justify-content: center; flex-shrink: 0; padding: 0;
+  color: #F7F1E6; align-items: center; justify-content: center; flex-shrink: 0; padding: 0;
 }
 @media (max-width: 680px) {
   header.site .nav { padding: 14px 16px; }
