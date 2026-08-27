@@ -18,22 +18,16 @@
 <header class="site">
   <div class="wrap nav">
     <a class="brand" href="index.html">
-      <img class="brand-mark" src="logo-icon.png" alt="" width="56" height="56">
+      <img class="brand-mark" src="logo-icon.png" alt="" width="44" height="44">
       <span class="mark">RIZZO TECHNOLOGY SOLUTIONS<small>IT CONSULTING &amp; WEB DEVELOPMENT</small></span>
     </a>
     <nav class="links">
-      <div class="dropdown hide-sm">
-        <a class="dropdown-toggle active" href="services.html">Services <span class="caret" aria-hidden="true">&#9662;</span></a>
-        <div class="dropdown-menu">
-          <a href="services.html#it-consulting">IT Consulting &amp; Support</a>
-          <a href="services.html#managed-it">Managed IT Services</a>
-          <a href="services.html#web-development">Web Development</a>
-          <a href="services.html#website-care">Website Care &amp; Hosting</a>
-        </div>
-      </div>
+      <a class="hide-sm" href="index.html">Home</a>
+      <a class="hide-sm active" href="services.html">Services</a>
       <a class="hide-sm" href="pricing.html">Pricing</a>
       <a class="hide-sm" href="about.html">About</a>
-      <button type="button" class="btn" data-open-consult>Book a consult</button>
+      <a class="hide-sm" href="team.html">Team</a>
+      <a class="btn hide-sm" href="contact.html">Book a Consult</a>
       <button type="button" class="mobile-toggle" id="mobile-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
         <span></span><span></span><span></span>
       </button>
@@ -42,153 +36,149 @@
   <div class="mobile-menu" id="mobile-menu" hidden>
     <a href="index.html">Home</a>
     <a class="active" href="services.html">Services</a>
-    <a class="sub" href="services.html#it-consulting">IT Consulting &amp; Support</a>
-    <a class="sub" href="services.html#managed-it">Managed IT Services</a>
-    <a class="sub" href="services.html#web-development">Web Development</a>
-    <a class="sub" href="services.html#website-care">Website Care &amp; Hosting</a>
     <a href="pricing.html">Pricing</a>
     <a href="about.html">About</a>
-    <button type="button" class="btn" data-open-consult>Book a consult</button>
+    <a href="team.html">Team</a>
+    <a class="btn" href="contact.html">Book a Consult</a>
   </div>
 </header>
 
 <main id="top">
-  <section class="page-hero wrap">
-    <p class="eyebrow">WHAT I DO</p>
-    <h1 class="slab">Four ways to work together, one point of contact.</h1>
-    <p class="lede">Most businesses end up with a web developer who doesn't touch hardware and an IT contractor who won't touch code. I do both — one-off or ongoing, remote or on-site — so nothing falls into the gap between two vendors pointing fingers at each other.</p>
-  </section>
-
-  <section id="it-consulting" class="wrap service-detail">
-    <div class="detail-grid">
-      <div>
-        <span class="tag mono">SYSTEMS</span>
-        <h2 class="slab" style="margin-top: 10px;">IT Consulting &amp; Support</h2>
-        <p style="color: var(--ink-soft); margin-top: 16px;">Hands-on help with the technology running your business day to day — remote, on-site, or on-call when something can't wait.</p>
-      </div>
-      <ul class="detail-list">
-        <li><strong>Remote IT Support</strong> &mdash; troubleshooting, Microsoft 365, software, and network issues handled without a truck roll.</li>
-        <li><strong>On-Site IT Support</strong> &mdash; hardware installs, network setup, new computer deployment, and anything that needs hands on equipment.</li>
-        <li><strong>Advanced IT Consulting</strong> &mdash; servers, cloud migrations, networking, and security projects that need deeper infrastructure expertise.</li>
-        <li><strong>Emergency &amp; After-Hours Support</strong> &mdash; evenings, weekends, and business-critical outages that need an immediate response.</li>
-        <li><strong>IT Infrastructure Assessments</strong> &mdash; a full review of your systems with a written list of findings and recommendations.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="managed-it" class="wrap service-detail">
-    <div class="detail-grid">
-      <div>
-        <span class="tag mono">MANAGED IT</span>
-        <h2 class="slab" style="margin-top: 10px;">Managed IT Services</h2>
-        <p style="color: var(--ink-soft); margin-top: 16px;">Recurring, proactive support instead of paying for every request one at a time &mdash; plans that scale from basic monitoring to a fully outsourced IT department.</p>
-      </div>
-      <ul class="detail-list">
-        <li><strong>Remote monitoring &amp; patching</strong> &mdash; endpoints kept current and watched, not discovered broken.</li>
-        <li><strong>Unlimited standard remote support</strong> &mdash; included on Business and Complete plans.</li>
-        <li><strong>Microsoft 365 &amp; security administration</strong> &mdash; user accounts, email, and endpoint security managed for you.</li>
-        <li><strong>Network &amp; backup monitoring</strong> &mdash; so a failure gets caught before it becomes downtime.</li>
-        <li><strong>Quarterly technology reviews</strong> &mdash; a regular check-in on what's working and what's next.</li>
-        <li><strong>Priority response &amp; vendor management</strong> &mdash; on the Complete plan, for businesses that want RTS to function as their IT department.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="web-development" class="wrap service-detail">
-    <div class="detail-grid">
-      <div>
-        <span class="tag mono">WEB</span>
-        <h2 class="slab" style="margin-top: 10px;">Web Development</h2>
-        <p style="color: var(--ink-soft); margin-top: 16px;">Custom-built sites and web apps — clean code, fast load times, and a site you can actually log in and update yourself afterward.</p>
-      </div>
-      <ul class="detail-list">
-        <li><strong>Starter, Business &amp; Professional site tiers</strong> &mdash; from a clean 5-page presence to a fully custom, 20-page build with advanced integrations.</li>
-        <li><strong>Custom web applications</strong> &mdash; customer portals, booking systems, CRM integrations, and other custom functionality.</li>
-        <li><strong>E-commerce</strong> &mdash; online stores, from a small product catalog to advanced multi-integration builds.</li>
-        <li><strong>SEO &amp; performance fundamentals</strong> &mdash; clean markup, fast pages, and the basics search engines reward, built in from the start.</li>
-        <li><strong>Content migration &amp; revisions</strong> &mdash; moving an existing site over, with multiple rounds of revisions built into every project.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="website-care" class="wrap service-detail">
-    <div class="detail-grid">
-      <div>
-        <span class="tag mono">CARE</span>
-        <h2 class="slab" style="margin-top: 10px;">Website Care &amp; Hosting</h2>
-        <p style="color: var(--ink-soft); margin-top: 16px;">So the site doesn't quietly go stale after launch &mdash; hosting, updates, and a standing block of time for small changes.</p>
-      </div>
-      <ul class="detail-list">
-        <li><strong>Managed hosting &amp; SSL</strong> &mdash; reliable hosting with security certificates handled for you.</li>
-        <li><strong>Software, plugin &amp; security updates</strong> &mdash; kept current on a schedule, not left until something breaks.</li>
-        <li><strong>Daily backups &amp; uptime monitoring</strong> &mdash; tested backups and a watchful eye on whether the site is actually up.</li>
-        <li><strong>Monthly content-change time</strong> &mdash; a standing block of time each month for small edits, built into Care plans.</li>
-        <li><strong>Performance &amp; SEO monitoring</strong> &mdash; on Care Plus, with a quarterly review and monthly analytics report.</li>
-      </ul>
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="eyebrow">WHAT I DO</p>
+      <h1>Four ways to work together, one point of contact.</h1>
+      <p class="lede">Most businesses end up with a web developer who doesn't touch hardware and an IT contractor who won't touch code. I do both — one-off or ongoing, remote or on-site — so nothing falls into the gap between two vendors pointing fingers at each other.</p>
     </div>
   </section>
 
   <section class="wrap">
-    <div class="contact">
-      <p class="eyebrow">NEXT STEP</p>
-      <h2 class="slab">Ready to talk specifics?</h2>
+    <div id="it-consulting" class="detail-row">
+      <div class="detail-copy">
+        <span class="tag">Systems</span>
+        <h2>IT Consulting &amp; Support</h2>
+        <p>Hands-on help with the technology running your business day to day — remote, on-site, or on-call when something can't wait.</p>
+        <ul class="check-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span><strong>Remote IT Support</strong> &mdash; troubleshooting, Microsoft 365, software, and network issues handled without a truck roll.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span><strong>On-Site IT Support</strong> &mdash; hardware installs, network setup, new computer deployment, and anything that needs hands on equipment.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span><strong>Advanced IT Consulting</strong> &mdash; servers, cloud migrations, networking, and security projects that need deeper infrastructure expertise.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span><strong>Emergency &amp; After-Hours Support</strong> &mdash; evenings, weekends, and business-critical outages that need an immediate response.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span><strong>IT Infrastructure Assessments</strong> &mdash; a full review of your systems with a written list of findings and recommendations.</span></li>
+        </ul>
+      </div>
+      <div class="detail-visual">
+        <span class="visual-tag">Remote Support</span>
+        <span class="visual-num">$100/hr</span>
+        <span class="visual-note">On-site from $125/hr &middot; full rates on the pricing page</span>
+      </div>
+    </div>
+
+    <div id="managed-it" class="detail-row reverse">
+      <div class="detail-copy">
+        <span class="tag">Managed IT</span>
+        <h2>Managed IT Services</h2>
+        <p>Recurring, proactive support instead of paying for every request one at a time &mdash; plans that scale from basic monitoring to a fully outsourced IT department.</p>
+        <ul class="check-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span><strong>Remote monitoring &amp; patching</strong> &mdash; endpoints kept current and watched, not discovered broken.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span><strong>Unlimited standard remote support</strong> &mdash; included on Business and Complete plans.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span><strong>Microsoft 365 &amp; security administration</strong> &mdash; user accounts, email, and endpoint security managed for you.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span><strong>Network &amp; backup monitoring</strong> &mdash; so a failure gets caught before it becomes downtime.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span><strong>Quarterly technology reviews</strong> &mdash; a regular check-in on what's working and what's next.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span><strong>Priority response &amp; vendor management</strong> &mdash; on the Complete plan, for businesses that want RTS to function as their IT department.</span></li>
+        </ul>
+      </div>
+      <div class="detail-visual">
+        <span class="visual-tag">Plans From</span>
+        <span class="visual-num">$79</span>
+        <span class="visual-note">per user, per month</span>
+      </div>
+    </div>
+
+    <div id="web-development" class="detail-row">
+      <div class="detail-copy">
+        <span class="tag">Web</span>
+        <h2>Web Development</h2>
+        <p>Custom-built sites and web apps — clean code, fast load times, and a site you can actually log in and update yourself afterward.</p>
+        <ul class="check-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span><strong>Starter, Business &amp; Professional site tiers</strong> &mdash; from a clean 5-page presence to a fully custom, 20-page build with advanced integrations.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span><strong>Custom web applications</strong> &mdash; customer portals, booking systems, CRM integrations, and other custom functionality.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span><strong>E-commerce</strong> &mdash; online stores, from a small product catalog to advanced multi-integration builds.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span><strong>SEO &amp; performance fundamentals</strong> &mdash; clean markup, fast pages, and the basics search engines reward, built in from the start.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span><strong>Content migration &amp; revisions</strong> &mdash; moving an existing site over, with multiple rounds of revisions built into every project.</span></li>
+        </ul>
+      </div>
+      <div class="detail-visual">
+        <span class="visual-tag">Starter Site</span>
+        <span class="visual-num">$1,500</span>
+        <span class="visual-note">Business &amp; Professional tiers go further</span>
+      </div>
+    </div>
+
+    <div id="website-care" class="detail-row reverse">
+      <div class="detail-copy">
+        <span class="tag">Care</span>
+        <h2>Website Care &amp; Hosting</h2>
+        <p>So the site doesn't quietly go stale after launch &mdash; hosting, updates, and a standing block of time for small changes.</p>
+        <ul class="check-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span><strong>Managed hosting &amp; SSL</strong> &mdash; reliable hosting with security certificates handled for you.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span><strong>Software, plugin &amp; security updates</strong> &mdash; kept current on a schedule, not left until something breaks.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span><strong>Daily backups &amp; uptime monitoring</strong> &mdash; tested backups and a watchful eye on whether the site is actually up.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span><strong>Monthly content-change time</strong> &mdash; a standing block of time each month for small edits, built into Care plans.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span><strong>Performance &amp; SEO monitoring</strong> &mdash; on Care Plus, with a quarterly review and monthly analytics report.</span></li>
+        </ul>
+      </div>
+      <div class="detail-visual">
+        <span class="visual-tag">Hosting From</span>
+        <span class="visual-num">$35/mo</span>
+        <span class="visual-note">Care plans from $99/mo</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap" style="padding: 88px 0;">
+      <h2>Ready to talk specifics?</h2>
       <p>A free 20-minute consult is enough to tell you which of these actually fits.</p>
-      <div class="ctas" style="display:flex; gap:14px; flex-wrap:wrap;">
-        <button type="button" class="btn" data-open-consult>Book a consult</button>
-        <a class="btn ghost" href="pricing.html">See pricing</a>
+      <div class="ctas">
+        <a class="btn on-dark" href="contact.html">Book a consult</a>
+        <a class="btn ghost" style="border-color: rgba(255,255,255,0.5); color: #fff;" href="pricing.html">See pricing</a>
       </div>
     </div>
   </section>
 </main>
 
-<div class="modal-overlay" id="consult-modal" hidden>
-  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="consult-modal-title">
-    <button type="button" class="modal-close" data-close-consult aria-label="Close">&times;</button>
-    <h2 class="slab" id="consult-modal-title">Book a free consult</h2>
-    <p class="modal-lede">Tell me a bit about your project and I'll reply within one business day.</p>
-    <form id="consult-form">
-      <div class="field">
-        <label for="cf-name">Name</label>
-        <input type="text" id="cf-name" name="name" required autocomplete="name">
-      </div>
-      <div class="field">
-        <label for="cf-company">Company name</label>
-        <input type="text" id="cf-company" name="company" required autocomplete="organization">
-      </div>
-      <div class="field">
-        <label for="cf-email">Email</label>
-        <input type="email" id="cf-email" name="email" required autocomplete="email">
-      </div>
-      <div class="field">
-        <label for="cf-phone">Phone <span class="optional">(optional)</span></label>
-        <input type="tel" id="cf-phone" name="phone" autocomplete="tel">
-      </div>
-      <div class="field">
-        <label for="cf-message">What are you looking for?</label>
-        <textarea id="cf-message" name="message" required></textarea>
-      </div>
-      <input type="hidden" name="access_key" value="f95a78b3-18c8-40da-8d31-dd8de1a51a6a">
-      <input type="hidden" name="subject" value="New consult request — rizzotechsolutions.com">
-      <input type="hidden" name="from_name" value="RTS website consult form">
-      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
-      <button type="submit" class="btn">Send request</button>
-      <p class="form-status" id="consult-status" role="status" aria-live="polite"></p>
-    </form>
-  </div>
-</div>
-
 <footer>
-  <div class="wrap footer-top">
-    <nav class="footer-nav mono">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="about.html">About</a>
-    </nav>
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Rizzo Technology Solutions</h4>
+      <p>IT consulting and web development for small businesses &mdash; one point of contact for both your systems and your website.</p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul class="footer-links">
+        <li><a href="services.html#it-consulting">IT Consulting &amp; Support</a></li>
+        <li><a href="services.html#managed-it">Managed IT Services</a></li>
+        <li><a href="services.html#web-development">Web Development</a></li>
+        <li><a href="services.html#website-care">Website Care &amp; Hosting</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <ul class="footer-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Get in Touch</h4>
+      <p>Response time: 1 business day<br>Remote &amp; on-site available</p>
+    </div>
   </div>
   <div class="wrap footer-bottom">
-    <span class="mono">&copy; 2026 RIZZO TECHNOLOGY SOLUTIONS</span>
-    <span class="mono">SITE V.3</span>
+    <span>&copy; 2026 Rizzo Technology Solutions</span>
+    <span>SITE V.4</span>
   </div>
 </footer>
 

@@ -18,22 +18,16 @@
 <header class="site">
   <div class="wrap nav">
     <a class="brand" href="index.html">
-      <img class="brand-mark" src="logo-icon.png" alt="" width="56" height="56">
+      <img class="brand-mark" src="logo-icon.png" alt="" width="44" height="44">
       <span class="mark">RIZZO TECHNOLOGY SOLUTIONS<small>IT CONSULTING &amp; WEB DEVELOPMENT</small></span>
     </a>
     <nav class="links">
-      <div class="dropdown hide-sm">
-        <a class="dropdown-toggle" href="services.html">Services <span class="caret" aria-hidden="true">&#9662;</span></a>
-        <div class="dropdown-menu">
-          <a href="services.html#it-consulting">IT Consulting &amp; Support</a>
-          <a href="services.html#managed-it">Managed IT Services</a>
-          <a href="services.html#web-development">Web Development</a>
-          <a href="services.html#website-care">Website Care &amp; Hosting</a>
-        </div>
-      </div>
+      <a class="hide-sm" href="index.html">Home</a>
+      <a class="hide-sm" href="services.html">Services</a>
       <a class="hide-sm active" href="pricing.html">Pricing</a>
       <a class="hide-sm" href="about.html">About</a>
-      <button type="button" class="btn" data-open-consult>Book a consult</button>
+      <a class="hide-sm" href="team.html">Team</a>
+      <a class="btn hide-sm" href="contact.html">Book a Consult</a>
       <button type="button" class="mobile-toggle" id="mobile-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
         <span></span><span></span><span></span>
       </button>
@@ -42,164 +36,146 @@
   <div class="mobile-menu" id="mobile-menu" hidden>
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
-    <a class="sub" href="services.html#it-consulting">IT Consulting &amp; Support</a>
-    <a class="sub" href="services.html#managed-it">Managed IT Services</a>
-    <a class="sub" href="services.html#web-development">Web Development</a>
-    <a class="sub" href="services.html#website-care">Website Care &amp; Hosting</a>
     <a class="active" href="pricing.html">Pricing</a>
     <a href="about.html">About</a>
-    <button type="button" class="btn" data-open-consult>Book a consult</button>
+    <a href="team.html">Team</a>
+    <a class="btn" href="contact.html">Book a Consult</a>
   </div>
 </header>
 
 <main id="top">
-  <section class="page-hero wrap">
-    <p class="eyebrow">PRICING</p>
-    <h1 class="slab">What things cost, up front.</h1>
-    <p class="lede">No hourly surprises on fixed-scope work, no vague "contact for quote" on everything. All pricing below is starting pricing &mdash; final numbers depend on scope, environment, and any third-party costs, and are always confirmed before work starts.</p>
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="eyebrow">PRICING</p>
+      <h1>What things cost, up front.</h1>
+      <p class="lede">No hourly surprises on fixed-scope work, no vague "contact for quote" on everything. All pricing below is starting pricing &mdash; final numbers depend on scope, environment, and any third-party costs, and are always confirmed before work starts.</p>
+    </div>
   </section>
 
-  <section class="wrap" style="padding-top: 20px;">
+  <section class="wrap">
     <div class="price-block">
-      <span class="mono label">IT Consulting &amp; Support &mdash; hourly</span>
-      <div class="table-scroll">
-        <table class="price-table">
-          <thead>
-            <tr>
-              <th scope="col"></th>
-              <th scope="col">Remote Support</th>
-              <th scope="col">On-Site Support</th>
-              <th scope="col">Advanced Consulting</th>
-              <th scope="col">Emergency / After-Hours</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="row-label">Price</td>
-              <td class="amount">$100/hr</td>
-              <td class="amount">$125/hr</td>
-              <td class="amount">$150/hr</td>
-              <td class="amount">$175/hr</td>
-            </tr>
-            <tr>
-              <td class="row-label">Best for</td>
-              <td>Remote troubleshooting &amp; software issues</td>
-              <td>Hands-on hardware &amp; network work</td>
-              <td>Infrastructure, cloud &amp; security projects</td>
-              <td>Evenings, weekends &amp; critical outages</td>
-            </tr>
-            <tr>
-              <td class="row-label">Minimum</td>
-              <td>30 minutes</td>
-              <td>1 hour</td>
-              <td>Quoted per project or hourly</td>
-              <td>1 hour</td>
-            </tr>
-          </tbody>
-        </table>
+      <span class="label">IT Consulting &amp; Support &mdash; hourly</span>
+      <div class="plan-grid" style="--plan-count: 4;">
+        <div class="plan-card">
+          <h3 class="plan-name">Remote Support</h3>
+          <div class="plan-price">$100/hr</div>
+          <div class="plan-fields">
+            <div class="plan-field"><span class="field-label">Best for</span><span class="field-value">Remote troubleshooting &amp; software issues</span></div>
+            <div class="plan-field"><span class="field-label">Minimum</span><span class="field-value">30 minutes</span></div>
+          </div>
+        </div>
+        <div class="plan-card">
+          <h3 class="plan-name">On-Site Support</h3>
+          <div class="plan-price">$125/hr</div>
+          <div class="plan-fields">
+            <div class="plan-field"><span class="field-label">Best for</span><span class="field-value">Hands-on hardware &amp; network work</span></div>
+            <div class="plan-field"><span class="field-label">Minimum</span><span class="field-value">1 hour</span></div>
+          </div>
+        </div>
+        <div class="plan-card">
+          <h3 class="plan-name">Advanced Consulting</h3>
+          <div class="plan-price">$150/hr</div>
+          <div class="plan-fields">
+            <div class="plan-field"><span class="field-label">Best for</span><span class="field-value">Infrastructure, cloud &amp; security projects</span></div>
+            <div class="plan-field"><span class="field-label">Minimum</span><span class="field-value">Quoted per project or hourly</span></div>
+          </div>
+        </div>
+        <div class="plan-card">
+          <h3 class="plan-name">Emergency / After-Hours</h3>
+          <div class="plan-price">$175/hr</div>
+          <div class="plan-fields">
+            <div class="plan-field"><span class="field-label">Best for</span><span class="field-value">Evenings, weekends &amp; critical outages</span></div>
+            <div class="plan-field"><span class="field-label">Minimum</span><span class="field-value">1 hour</span></div>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="price-block">
-      <span class="mono label">Managed IT Services &mdash; per user, monthly</span>
-      <div class="table-scroll">
-        <table class="price-table">
-          <thead>
-            <tr>
-              <th scope="col"></th>
-              <th scope="col">RTS Essential</th>
-              <th scope="col">RTS Business</th>
-              <th scope="col">RTS Complete</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="row-label">Price</td>
-              <td class="amount">$79/user/mo</td>
-              <td class="amount">$129/user/mo</td>
-              <td class="amount">$159/user/mo</td>
-            </tr>
-            <tr>
-              <td class="row-label">Best for</td>
-              <td>Very small businesses wanting basic monitoring</td>
-              <td>Most small businesses</td>
-              <td>Businesses that want an outsourced IT department</td>
-            </tr>
-            <tr>
-              <td class="row-label">Includes</td>
-              <td>Remote monitoring &middot; endpoint &amp; update monitoring &middot; remote support &middot; quarterly review</td>
-              <td>Everything in Essential &middot; unlimited remote support &middot; patch management &middot; managed security &middot; backup &amp; network monitoring</td>
-              <td>Everything in Business &middot; priority support &middot; advanced security &middot; backup/network/firewall management &middot; annual planning</td>
-            </tr>
-          </tbody>
-        </table>
+      <span class="label">Managed IT Services &mdash; per user, monthly</span>
+      <div class="plan-grid">
+        <div class="plan-card">
+          <h3 class="plan-name">RTS Essential</h3>
+          <div class="plan-price">$79/user/mo</div>
+          <div class="plan-fields">
+            <div class="plan-field"><span class="field-label">Best for</span><span class="field-value">Very small businesses wanting basic monitoring</span></div>
+            <div class="plan-field"><span class="field-label">Includes</span><span class="field-value">Remote monitoring &middot; endpoint &amp; update monitoring &middot; remote support &middot; quarterly review</span></div>
+          </div>
+        </div>
+        <div class="plan-card">
+          <h3 class="plan-name">RTS Business</h3>
+          <div class="plan-price">$129/user/mo</div>
+          <div class="plan-fields">
+            <div class="plan-field"><span class="field-label">Best for</span><span class="field-value">Most small businesses</span></div>
+            <div class="plan-field"><span class="field-label">Includes</span><span class="field-value">Everything in Essential &middot; unlimited remote support &middot; patch management &middot; managed security &middot; backup &amp; network monitoring</span></div>
+          </div>
+        </div>
+        <div class="plan-card">
+          <h3 class="plan-name">RTS Complete</h3>
+          <div class="plan-price">$159/user/mo</div>
+          <div class="plan-fields">
+            <div class="plan-field"><span class="field-label">Best for</span><span class="field-value">Businesses that want an outsourced IT department</span></div>
+            <div class="plan-field"><span class="field-label">Includes</span><span class="field-value">Everything in Business &middot; priority support &middot; advanced security &middot; backup/network/firewall management &middot; annual planning</span></div>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="price-block">
-      <span class="mono label">Web Development &mdash; project-based</span>
-      <div class="table-scroll">
-        <table class="price-table">
-          <thead>
-            <tr>
-              <th scope="col"></th>
-              <th scope="col">Starter Website</th>
-              <th scope="col">Business Website</th>
-              <th scope="col">Professional Website</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="row-label">Price</td>
-              <td class="amount">From $1,500</td>
-              <td class="amount">From $2,750</td>
-              <td class="amount">From $4,500</td>
-            </tr>
-            <tr>
-              <td class="row-label">Best for</td>
-              <td>Independent professionals &amp; small businesses</td>
-              <td>Most established small businesses</td>
-              <td>Businesses needing advanced functionality</td>
-            </tr>
-            <tr>
-              <td class="row-label">Includes</td>
-              <td>Up to 5 pages &middot; responsive design &middot; contact form &middot; basic SEO &middot; 2 rounds of revisions</td>
-              <td>Everything in Starter &middot; up to 10 pages &middot; custom design &middot; enhanced SEO &amp; lead forms &middot; blog &middot; 3 rounds of revisions</td>
-              <td>Everything in Business &middot; up to 20 pages &middot; custom layouts &middot; CRM/scheduling integrations &middot; advanced SEO &middot; 4 rounds of revisions</td>
-            </tr>
-          </tbody>
-        </table>
+      <span class="label">Web Development &mdash; project-based</span>
+      <div class="plan-grid">
+        <div class="plan-card">
+          <h3 class="plan-name">Starter Website</h3>
+          <div class="plan-price">From $1,500</div>
+          <div class="plan-fields">
+            <div class="plan-field"><span class="field-label">Best for</span><span class="field-value">Independent professionals &amp; small businesses</span></div>
+            <div class="plan-field"><span class="field-label">Includes</span><span class="field-value">Up to 5 pages &middot; responsive design &middot; contact form &middot; basic SEO &middot; 2 rounds of revisions</span></div>
+          </div>
+        </div>
+        <div class="plan-card">
+          <h3 class="plan-name">Business Website</h3>
+          <div class="plan-price">From $2,750</div>
+          <div class="plan-fields">
+            <div class="plan-field"><span class="field-label">Best for</span><span class="field-value">Most established small businesses</span></div>
+            <div class="plan-field"><span class="field-label">Includes</span><span class="field-value">Everything in Starter &middot; up to 10 pages &middot; custom design &middot; enhanced SEO &amp; lead forms &middot; blog &middot; 3 rounds of revisions</span></div>
+          </div>
+        </div>
+        <div class="plan-card">
+          <h3 class="plan-name">Professional Website</h3>
+          <div class="plan-price">From $4,500</div>
+          <div class="plan-fields">
+            <div class="plan-field"><span class="field-label">Best for</span><span class="field-value">Businesses needing advanced functionality</span></div>
+            <div class="plan-field"><span class="field-label">Includes</span><span class="field-value">Everything in Business &middot; up to 20 pages &middot; custom layouts &middot; CRM/scheduling integrations &middot; advanced SEO &middot; 4 rounds of revisions</span></div>
+          </div>
+        </div>
       </div>
       <p class="price-note">Custom web applications and e-commerce sites are quoted individually, generally starting between $3,500 and $5,000+.</p>
     </div>
 
     <div class="price-block">
-      <span class="mono label">Website Care &amp; Hosting &mdash; monthly</span>
-      <div class="table-scroll">
-        <table class="price-table">
-          <thead>
-            <tr>
-              <th scope="col"></th>
-              <th scope="col">Hosting</th>
-              <th scope="col">Website Care</th>
-              <th scope="col">Website Care Plus</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="row-label">Price</td>
-              <td class="amount">$35/mo</td>
-              <td class="amount">$99/mo</td>
-              <td class="amount">$175/mo</td>
-            </tr>
-            <tr>
-              <td class="row-label">Includes</td>
-              <td>Managed hosting &middot; SSL &middot; uptime monitoring</td>
-              <td>Everything in Hosting &middot; software &amp; security updates &middot; daily backups &middot; security monitoring &middot; 30 min of content changes/mo</td>
-              <td>Everything in Care &middot; up to 1 hr of changes/mo &middot; performance &amp; Search Console monitoring &middot; monthly analytics report &middot; priority support</td>
-            </tr>
-          </tbody>
-        </table>
+      <span class="label">Website Care &amp; Hosting &mdash; monthly</span>
+      <div class="plan-grid">
+        <div class="plan-card">
+          <h3 class="plan-name">Hosting</h3>
+          <div class="plan-price">$35/mo</div>
+          <div class="plan-fields">
+            <div class="plan-field"><span class="field-label">Includes</span><span class="field-value">Managed hosting &middot; SSL &middot; uptime monitoring</span></div>
+          </div>
+        </div>
+        <div class="plan-card">
+          <h3 class="plan-name">Website Care</h3>
+          <div class="plan-price">$99/mo</div>
+          <div class="plan-fields">
+            <div class="plan-field"><span class="field-label">Includes</span><span class="field-value">Everything in Hosting &middot; software &amp; security updates &middot; daily backups &middot; security monitoring &middot; 30 min of content changes/mo</span></div>
+          </div>
+        </div>
+        <div class="plan-card">
+          <h3 class="plan-name">Website Care Plus</h3>
+          <div class="plan-price">$175/mo</div>
+          <div class="plan-fields">
+            <div class="plan-field"><span class="field-label">Includes</span><span class="field-value">Everything in Care &middot; up to 1 hr of changes/mo &middot; performance &amp; Search Console monitoring &middot; monthly analytics report &middot; priority support</span></div>
+          </div>
+        </div>
       </div>
     </div>
     <p class="price-note">Every plan starts with a free 20-minute consult &mdash; no obligation, no pressure.</p>
@@ -208,7 +184,7 @@
   <section class="wrap">
     <div class="section-head">
       <p class="eyebrow">COMMON QUESTIONS</p>
-      <h2 class="slab">Before you ask.</h2>
+      <h2>Before you ask.</h2>
     </div>
     <div class="faq">
       <details class="faq-item">
@@ -234,64 +210,49 @@
     </div>
   </section>
 
-  <section class="wrap">
-    <div class="contact">
-      <p class="eyebrow">NEXT STEP</p>
-      <h2 class="slab">Let's find your real number.</h2>
+  <section class="cta-band">
+    <div class="wrap" style="padding: 88px 0;">
+      <h2>Let's find your real number.</h2>
       <p>Every plan starts with a free 20-minute consult &mdash; no obligation, no pressure.</p>
-      <button type="button" class="btn" data-open-consult>Book a consult</button>
+      <div class="ctas">
+        <a class="btn on-dark" href="contact.html">Book a consult</a>
+      </div>
     </div>
   </section>
 </main>
 
-<div class="modal-overlay" id="consult-modal" hidden>
-  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="consult-modal-title">
-    <button type="button" class="modal-close" data-close-consult aria-label="Close">&times;</button>
-    <h2 class="slab" id="consult-modal-title">Book a free consult</h2>
-    <p class="modal-lede">Tell me a bit about your project and I'll reply within one business day.</p>
-    <form id="consult-form">
-      <div class="field">
-        <label for="cf-name">Name</label>
-        <input type="text" id="cf-name" name="name" required autocomplete="name">
-      </div>
-      <div class="field">
-        <label for="cf-company">Company name</label>
-        <input type="text" id="cf-company" name="company" required autocomplete="organization">
-      </div>
-      <div class="field">
-        <label for="cf-email">Email</label>
-        <input type="email" id="cf-email" name="email" required autocomplete="email">
-      </div>
-      <div class="field">
-        <label for="cf-phone">Phone <span class="optional">(optional)</span></label>
-        <input type="tel" id="cf-phone" name="phone" autocomplete="tel">
-      </div>
-      <div class="field">
-        <label for="cf-message">What are you looking for?</label>
-        <textarea id="cf-message" name="message" required></textarea>
-      </div>
-      <input type="hidden" name="access_key" value="f95a78b3-18c8-40da-8d31-dd8de1a51a6a">
-      <input type="hidden" name="subject" value="New consult request — rizzotechsolutions.com">
-      <input type="hidden" name="from_name" value="RTS website consult form">
-      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
-      <button type="submit" class="btn">Send request</button>
-      <p class="form-status" id="consult-status" role="status" aria-live="polite"></p>
-    </form>
-  </div>
-</div>
-
 <footer>
-  <div class="wrap footer-top">
-    <nav class="footer-nav mono">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="about.html">About</a>
-    </nav>
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Rizzo Technology Solutions</h4>
+      <p>IT consulting and web development for small businesses &mdash; one point of contact for both your systems and your website.</p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul class="footer-links">
+        <li><a href="services.html#it-consulting">IT Consulting &amp; Support</a></li>
+        <li><a href="services.html#managed-it">Managed IT Services</a></li>
+        <li><a href="services.html#web-development">Web Development</a></li>
+        <li><a href="services.html#website-care">Website Care &amp; Hosting</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <ul class="footer-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Get in Touch</h4>
+      <p>Response time: 1 business day<br>Remote &amp; on-site available</p>
+    </div>
   </div>
   <div class="wrap footer-bottom">
-    <span class="mono">&copy; 2026 RIZZO TECHNOLOGY SOLUTIONS</span>
-    <span class="mono">SITE V.3</span>
+    <span>&copy; 2026 Rizzo Technology Solutions</span>
+    <span>SITE V.4</span>
   </div>
 </footer>
 

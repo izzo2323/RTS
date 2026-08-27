@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Rizzo Technology Solutions</title>
+<meta name="description" content="Get in touch with Rizzo Technology Solutions to schedule a free consult about IT support or web development.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="favicon-16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+<body>
+
+<a class="skip-link" href="#top">Skip to content</a>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <img class="brand-mark" src="logo-icon.png" alt="" width="44" height="44">
+      <span class="mark">RIZZO TECHNOLOGY SOLUTIONS<small>IT CONSULTING &amp; WEB DEVELOPMENT</small></span>
+    </a>
+    <nav class="links">
+      <a class="hide-sm" href="index.html">Home</a>
+      <a class="hide-sm" href="services.html">Services</a>
+      <a class="hide-sm" href="pricing.html">Pricing</a>
+      <a class="hide-sm" href="about.html">About</a>
+      <a class="hide-sm" href="team.html">Team</a>
+      <a class="btn hide-sm" href="contact.html">Book a Consult</a>
+      <button type="button" class="mobile-toggle" id="mobile-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="about.html">About</a>
+    <a href="team.html">Team</a>
+    <a class="btn" href="contact.html">Book a Consult</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="eyebrow">CONTACT</p>
+      <h1>Tell me what's broken, or what you're building.</h1>
+      <p class="lede">Send a note with a rough idea of the project or problem, and I'll reply within one business day.</p>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>Get in touch</h2>
+        <p>Have questions about IT support or web development, or want to schedule a free consult? This goes straight to me &mdash; no intake team in between.</p>
+        <div class="info-rows">
+          <div class="info-row">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2m6-2a10 10 0 11-20 0 10 10 0 0120 0z"/></svg>
+            </div>
+            <div>
+              <h3>Response time</h3>
+              <p>Within 1 business day</p>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12h18M12 3a15 15 0 010 18 15 15 0 010-18zM3 12a9 9 0 0118 0 9 9 0 01-18 0z"/></svg>
+            </div>
+            <div>
+              <h3>Availability</h3>
+              <p>Remote &amp; on-site support, plus after-hours for critical issues</p>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            </div>
+            <div>
+              <h3>First step</h3>
+              <p>A free 20-minute consult &mdash; no obligation, no pressure</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-card">
+        <h3>Send a message</h3>
+        <form id="consult-form">
+          <div class="field">
+            <label for="cf-name">Name</label>
+            <input type="text" id="cf-name" name="name" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="cf-company">Company name</label>
+            <input type="text" id="cf-company" name="company" required autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="cf-email">Email</label>
+            <input type="email" id="cf-email" name="email" required autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="cf-phone">Phone <span class="optional">(optional)</span></label>
+            <input type="tel" id="cf-phone" name="phone" autocomplete="tel">
+          </div>
+          <div class="field">
+            <label for="cf-message">What are you looking for?</label>
+            <textarea id="cf-message" name="message" required></textarea>
+          </div>
+          <input type="hidden" name="access_key" value="f95a78b3-18c8-40da-8d31-dd8de1a51a6a">
+          <input type="hidden" name="subject" value="New consult request — rizzotechsolutions.com">
+          <input type="hidden" name="from_name" value="RTS website consult form">
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+          <button type="submit" class="btn">Send request</button>
+          <p class="form-status" id="consult-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div>
+      <h4>Rizzo Technology Solutions</h4>
+      <p>IT consulting and web development for small businesses &mdash; one point of contact for both your systems and your website.</p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul class="footer-links">
+        <li><a href="services.html#it-consulting">IT Consulting &amp; Support</a></li>
+        <li><a href="services.html#managed-it">Managed IT Services</a></li>
+        <li><a href="services.html#web-development">Web Development</a></li>
+        <li><a href="services.html#website-care">Website Care &amp; Hosting</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <ul class="footer-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Get in Touch</h4>
+      <p>Response time: 1 business day<br>Remote &amp; on-site available</p>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>&copy; 2026 Rizzo Technology Solutions</span>
+    <span>SITE V.4</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
