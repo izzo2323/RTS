@@ -848,3 +848,31 @@ footer {
   .brand .mark { font-size: 0.92rem; }
   nav.links { gap: 14px; }
 }
+
+/* ---------- Legal pages ---------- */
+.legal-page {
+  max-width: 720px;
+  padding-top: 0;
+  padding-bottom: 40px;
+}
+.legal-page .legal-updated {
+  color: var(--ink-faint);
+  font-size: 0.9rem;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+}
+.legal-page h2 {
+  font-size: 1.25rem;
+  margin-top: 36px;
+  margin-bottom: 10px;
+}
+.legal-page h2:first-of-type { margin-top: 0; }
+.legal-page p { color: var(--ink-soft); }
+.legal-page .legal-note {
+  margin-top: 36px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  font-size: 0.9rem;
+  color: var(--ink-faint);
+}
