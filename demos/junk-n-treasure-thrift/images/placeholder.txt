@@ -1,0 +1,8 @@
+This site currently uses CSS gradient placeholders instead of real photos.
+
+To finish the site, add:
+- favicon.ico (16x16/32x32 icon, teal/mustard to match the palette) referenced by all pages as images/favicon.ico
+- Real interior/exterior photos of the store (replace the .image-placeholder block in index.html)
+- Photos of furniture/collectibles/glassware departments if available, to replace department icons with real imagery
+
+Royalty-free stock alternatives (Unsplash/Pexels/Pixabay) work fine as a placeholder until real photos are supplied.

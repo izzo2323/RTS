@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact &amp; Directions — Penelope's Lil' Cafe, Lincoln NE</title>
+<meta name="description" content="Hours, location, and contact information for Penelope's Lil' Cafe in Lincoln, NE.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="demo-alert-overlay" id="demoAlert" role="dialog" aria-modal="true" aria-labelledby="demoAlertTitle">
+  <div class="demo-alert-box">
+    <h2 id="demoAlertTitle">Demo site &mdash; please note</h2>
+    <p>This site was built by Rizzo Technology Solutions as a design preview for Penelope's Lil' Cafe and is not their official website. Details shown here &mdash; hours, pricing, contact info, and more &mdash; are for demonstration purposes only and may not be accurate. Please contact Penelope's Lil' Cafe directly to confirm anything before relying on it.</p>
+    <button type="button" class="btn demo-alert-close" id="demoAlertClose">Got it, continue</button>
+  </div>
+</div>
+
+
+<div class="badge-strip">NOW SERVING BREAKFAST ALL DAY &middot; MON&ndash;FRI, 7AM&ndash;2PM</div>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <span class="mark display">Penelope's Lil' Cafe</span>
+      <span class="sub">NEIGHBORHOOD BREAKFAST &middot; LINCOLN, NE</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+    <nav class="links">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="menu.html">Menu</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link active" href="contact.html">Contact</a>
+      <a class="btn" href="tel:+14024350998">Call Us</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero wrap">
+    <p class="label">VISIT US</p>
+    <h1 class="display">Find us in the neighborhood.</h1>
+    <p class="lede">Open Monday through Friday for breakfast &mdash; walk-ins welcome.</p>
+  </section>
+
+  <section class="wrap" style="border-top:none; padding-top:0;">
+    <div class="info-grid">
+      <div>
+        <p class="label" style="color:var(--rose-deep); margin-bottom:18px; display:block;">HOURS</p>
+        <table class="hours-table">
+          <tr><td>Monday &ndash; Friday</td><td>7:00am &ndash; 2:00pm</td></tr>
+          <tr><td>Saturday</td><td>Closed</td></tr>
+          <tr><td>Sunday</td><td>Closed</td></tr>
+        </table>
+      </div>
+      <div>
+        <p class="label" style="color:var(--rose-deep); margin-bottom:18px; display:block;">FIND US</p>
+        <div class="addr-block">
+          <span class="line">4724 Pioneers Blvd</span>
+          <span class="line">Lincoln, NE 68506</span>
+          <span class="mono-ish">(402) 435-0998</span>
+          <span class="mono-ish">penelopeslincoln@gmail.com</span>
+        </div>
+        <div class="map-placeholder">Map placeholder &mdash; the live site would embed an interactive map here</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" style="border-top: 1px solid var(--line);">
+    <div class="section-head">
+      <p class="label">SEND A MESSAGE</p>
+      <h2 class="display">Questions or a group booking?</h2>
+    </div>
+    <form class="contact-form" id="contact-form">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn">Send Message</button>
+      <p id="form-status" style="color: var(--ink-soft); font-size: 0.9rem;"></p>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="label">&copy; 2026 PENELOPE'S LIL' CAFE, LINCOLN NE</span>
+    <div class="social">
+      <a href="https://www.facebook.com/penelopeslincoln" target="_blank" rel="noopener">Facebook</a>
+      <a href="contact.html">Directions</a>
+    </div>
+  </div>
+</footer>
+
+<div class="demo-tag">DEMO MOCKUP &middot; built by Rizzo Technology Solutions</div>
+
+<script src="script.js"></script>
+</body>
+</html>

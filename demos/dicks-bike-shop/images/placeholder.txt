@@ -1,0 +1,14 @@
+Image placeholders for Dick's Bike Shop demo site.
+
+This demo currently uses CSS-pattern placeholder blocks instead of real photos
+(no stock photos were substituted for the shop's own branding).
+
+Before going live, replace with:
+- Shop storefront / interior photo (hero section, index.html)
+- Repair bench / mechanic-at-work photo (services.html)
+- Product photos for tubes, tires, chains, helmets, etc. (shop.html)
+- favicon.ico (32x32) using the shop's own branding if a logo exists
+
+Recommended sources: Nick's own photos of the shop (best, most authentic),
+or royalty-free stock from Unsplash/Pexels/Pixabay as a placeholder until
+real photos are available.

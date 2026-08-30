@@ -65,7 +65,49 @@ nav.links a:hover, nav.links a.active { color: var(--accent); }
   font-family: inherit;
 }
 .btn:hover { background: var(--ink); color: var(--bg); border-color: var(--ink); }
-@media (max-width: 780px) { nav.links a.hide-sm { display: none; } }
+
+.nav-toggle {
+  display: none;
+  width: 28px; height: 20px;
+  position: relative;
+  border: none; background: none; padding: 0; margin: 0;
+  cursor: pointer; color: inherit;
+}
+.nav-toggle span,
+.nav-toggle::before,
+.nav-toggle::after {
+  content: "";
+  position: absolute; left: 0; right: 0;
+  height: 1px;
+  background: currentColor;
+}
+.nav-toggle::before { top: 0; }
+.nav-toggle span { top: 50%; transform: translateY(-50%); }
+.nav-toggle::after { bottom: 0; }
+
+@media (max-width: 780px) {
+  .nav-toggle { display: block; }
+  nav.links a.hide-sm { display: none; }
+  nav.links.is-open {
+    position: fixed;
+    inset: 0;
+    background: var(--surface);
+    color: var(--ink);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 40px;
+    z-index: 50;
+  }
+  nav.links.is-open a.hide-sm {
+    display: block;
+    font-size: 1.15rem;
+    color: var(--ink);
+  }
+  nav.links.is-open a.btn { margin-top: 8px; }
+}
 
 /* Hero */
 .hero {

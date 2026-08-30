@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio — Extreme Photo</title>
+<meta name="description" content="Selected wedding, senior portrait, engagement, and family photography by Extreme Photo in West Des Moines, Iowa.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="demo-alert-overlay" id="demoAlert" role="dialog" aria-modal="true" aria-labelledby="demoAlertTitle">
+  <div class="demo-alert-box">
+    <h2 id="demoAlertTitle">Demo site &mdash; please note</h2>
+    <p>This site was built by Rizzo Technology Solutions as a design preview for Extreme Photo and is not their official website. Details shown here &mdash; hours, pricing, contact info, and more &mdash; are for demonstration purposes only and may not be accurate. Please contact Extreme Photo directly to confirm anything before relying on it.</p>
+    <button type="button" class="btn demo-alert-close" id="demoAlertClose">Got it, continue</button>
+  </div>
+</div>
+
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="index.html"><span class="mark">EXTREME<span class="accent-dot">.</span></span></a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+    <nav class="links" id="primary-nav">
+      <a href="index.html">Home</a>
+      <a class="active" href="portfolio.html">Portfolio</a>
+      <a href="about.html">About</a>
+      <a href="packages.html">Packages</a>
+      <a class="btn" href="contact.html">Book a Session</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="bg" aria-hidden="true"></div>
+    <div class="wrap inner">
+      <p class="eyebrow">SELECTED WORK</p>
+      <h1 class="display">Portfolio</h1>
+      <p class="lede">Weddings, senior portraits, engagements, and family sessions shot across Central Iowa &mdash; 35 years of finding the real moment, not just the posed one.</p>
+    </div>
+  </section>
+
+  <section class="wrap" style="border-top:none;">
+    <div class="filter-bar">
+      <button data-filter="all" class="active">All Work</button>
+      <button data-filter="weddings">Weddings</button>
+      <button data-filter="seniors">Senior Portraits</button>
+      <button data-filter="family">Family</button>
+      <button data-filter="engagement">Engagement</button>
+    </div>
+    <div class="masonry">
+      <div class="m-item" data-category="weddings"><div class="ph-block" style="height:340px; background:linear-gradient(155deg,#2a1418,#131113);"><div class="cap">Ceremony &amp; Reception<span class="genre">Weddings</span></div></div></div>
+      <div class="m-item" data-category="seniors"><div class="ph-block" style="height:250px; background:linear-gradient(155deg,#3a1a20,#1f1b1d);"><div class="cap">Class of 2026<span class="genre">Senior Portraits</span></div></div></div>
+      <div class="m-item" data-category="weddings"><div class="ph-block" style="height:310px; background:linear-gradient(155deg,#241014,#131113);"><div class="cap">First Look<span class="genre">Weddings</span></div></div></div>
+      <div class="m-item" data-category="engagement"><div class="ph-block" style="height:220px; background:linear-gradient(155deg,#331419,#1f1b1d);"><div class="cap">Golden Hour Session<span class="genre">Engagement</span></div></div></div>
+      <div class="m-item" data-category="family"><div class="ph-block" style="height:290px; background:linear-gradient(155deg,#2a1418,#131113);"><div class="cap">Three Generations<span class="genre">Family</span></div></div></div>
+      <div class="m-item" data-category="seniors"><div class="ph-block" style="height:245px; background:linear-gradient(155deg,#3a1a20,#1f1b1d);"><div class="cap">Studio Portrait<span class="genre">Senior Portraits</span></div></div></div>
+      <div class="m-item" data-category="weddings"><div class="ph-block" style="height:300px; background:linear-gradient(155deg,#241014,#131113);"><div class="cap">Vows Outdoors<span class="genre">Weddings</span></div></div></div>
+      <div class="m-item" data-category="family"><div class="ph-block" style="height:260px; background:linear-gradient(155deg,#331419,#1f1b1d);"><div class="cap">Backyard Session<span class="genre">Family</span></div></div></div>
+      <div class="m-item" data-category="engagement"><div class="ph-block" style="height:235px; background:linear-gradient(155deg,#2a1418,#131113);"><div class="cap">Downtown Des Moines<span class="genre">Engagement</span></div></div></div>
+      <div class="m-item" data-category="weddings"><div class="ph-block" style="height:320px; background:linear-gradient(155deg,#3a1a20,#1f1b1d);"><div class="cap">Reception Dance Floor<span class="genre">Weddings</span></div></div></div>
+      <div class="m-item" data-category="seniors"><div class="ph-block" style="height:270px; background:linear-gradient(155deg,#241014,#131113);"><div class="cap">Outdoor Senior Session<span class="genre">Senior Portraits</span></div></div></div>
+      <div class="m-item" data-category="family"><div class="ph-block" style="height:255px; background:linear-gradient(155deg,#331419,#1f1b1d);"><div class="cap">Holiday Portraits<span class="genre">Family</span></div></div></div>
+    </div>
+    <p style="margin-top:36px; font-size:0.85rem; color:var(--ink-faint);">Images shown are style placeholders for this mockup, not actual session photos.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="mark">EXTREME PHOTO</span>
+    <div class="social">
+      <a href="tel:5152502969">(515) 250-2969</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<div class="demo-tag">DEMO MOCKUP &middot; built by <a href="/">Rizzo Technology Solutions</a></div>
+
+<script src="script.js"></script>
+</body>
+</html>

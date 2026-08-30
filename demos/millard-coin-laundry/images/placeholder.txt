@@ -1,0 +1,11 @@
+This demo uses CSS gradients and icon graphics instead of stock photos, so no
+external image files are required to view the site as-is.
+
+If you want to add real photos before sending this as a pitch:
+- A real exterior/interior photo of the Millard P St location (if you have one
+  or can take one) would strengthen this far more than a stock photo.
+- Otherwise use a royalty-free laundromat photo from Unsplash or Pexels and
+  reference it from index.html's hero section.
+
+favicon.ico is currently an empty placeholder file — replace with a real
+32x32 icon before this ever goes live.

@@ -1,0 +1,4 @@
+This demo intentionally uses CSS-gradient placeholder blocks instead of stock or real photos
+(see portfolio.html / index.html .ph-block elements) since no rights-cleared images of Extreme
+Photo's actual work were available. Drop real session photos here and swap the .ph-block divs
+for <img> tags before using this beyond a pitch mockup.

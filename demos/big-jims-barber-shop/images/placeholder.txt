@@ -1,0 +1,8 @@
+Placeholder directory for real photos.
+
+Before sending this mockup live, replace the CSS-gradient gallery blocks in gallery.html
+with real shop photos:
+- Interior/chair shot for the hero background (currently a stock Unsplash barbershop image)
+- Classic Cuts, Skin Fades, Beard Work, Hot Towel Shaves — one representative photo each
+
+Use royalty-free sources (Unsplash, Pexels, Pixabay) only if real shop photos aren't available.

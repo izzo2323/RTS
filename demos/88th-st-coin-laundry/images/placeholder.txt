@@ -1,0 +1,11 @@
+Placeholder directory for real photos of 88th St Coin Laundry.
+
+Suggested replacements before sending as a live pitch:
+1. favicon.ico - simple washer/coin icon
+2. Storefront photo (location.html) - replaces the .image-placeholder gradient block
+3. Interior/machine photo (optional, for home or pricing page)
+
+For this mockup, imagery is represented with CSS gradient placeholder blocks
+instead of stock photos, since no real photos of this specific business were
+sourced. Swap in real photos of the actual storefront once available, or ask
+the owner to share a few during the sales conversation.

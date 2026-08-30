@@ -1,0 +1,10 @@
+This demo uses CSS-gradient placeholder blocks instead of real photos (see .hero-art
+and .about-art in style.css), since no rights-cleared photos of the actual cafe were
+used for this mockup.
+
+To finish the site for real use, add:
+- hero.jpg — a wide shot of the dining room or a signature dish (used in place of .hero-art)
+- about.jpg — an interior or team photo (used in place of .about-art)
+
+Free stock options if real photos aren't available yet: Unsplash, Pexels, or Pixabay
+(search "diner breakfast" / "cozy cafe interior").
